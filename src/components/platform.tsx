@@ -32,6 +32,7 @@ import {
   Radio,
 } from 'lucide-react';
 import { Car } from './car';
+import { VirtualGarage } from './virtual-garage';
 const PlatformDialogs = dynamic(() => import('./platform-dialogs'));
 import type { Member } from './community-map';
 const CommunityMap = dynamic(() => import('./community-map'), {
@@ -568,7 +569,9 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
             <div>
               <span className="eyebrow">{heading.eyebrow}</span>
               <h1>
-                {screen === 'home' ? (
+                {screen === 'studio' ? (
+            <VirtualGarage onBack={() => navigate('garage')} />
+          ) : screen === 'home' ? (
                   <>
                     Willkommen im <em>Collective.</em>
                   </>
