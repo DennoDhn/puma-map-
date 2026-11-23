@@ -1,7 +1,7 @@
 {
   "name": "puma-map",
   "version": "0.6.0",
-  "description": "PumaMap \u2013 Ford Puma Mk1 Community",
+  "description": "PumaMap – Ford Puma Mk1 Community",
   "scripts": {
     "dev": "node scripts/dev.mjs",
     "build": "prisma generate && next build",
@@ -16,7 +16,8 @@
     "db:seed": "node --import tsx scripts/seed.ts",
     "check": "npm run typecheck && npm run lint && npm test",
     "check:source": "node scripts/check-source-safety.mjs",
-    "test:migrations": "node --import tsx --test tests/migration.test.ts"
+    "test:migrations": "node --import tsx --test tests/migration.test.ts",
+    "build:preview": "node scripts/build-preview.mjs"
   },
   "keywords": [],
   "author": "",
@@ -49,7 +50,8 @@
     "prettier": "3.10.1",
     "prisma": "7.10.1",
     "tsx": "4.23.15",
-    "typescript": "6.0.3"
+    "typescript": "6.0.3",
+    "esbuild": "0.28.2"
   },
   "private": true,
   "engines": {
