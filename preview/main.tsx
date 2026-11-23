@@ -3,5 +3,6 @@ import { Platform } from '../src/components/platform';
 import '../src/app/globals.css';
 import '../src/app/driveonyx-2.css';
 import '../src/app/noir-signature.css';
+import '../src/app/noir-details.css';
 
 createRoot(document.getElementById('app')!).render(<Platform />);
