@@ -50,6 +50,8 @@ jobs:
       - run: npm run test:migrations
       - run: npm run db:seed
       - run: npm run build
+      - name: Verify static GitHub Pages preview build
+        run: npm run build:preview
       - name: Verify complete source and Git restore
         run: python3 scripts/export-project.py "$RUNNER_TEMP/pumamap-checkpoint.zip"
       - run: npm audit --audit-level=moderate
