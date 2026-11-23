@@ -569,9 +569,7 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
             <div>
               <span className="eyebrow">{heading.eyebrow}</span>
               <h1>
-                {screen === 'studio' ? (
-            <VirtualGarage onBack={() => navigate('garage')} />
-          ) : screen === 'home' ? (
+                {screen === 'home' ? (
                   <>
                     Willkommen im <em>Collective.</em>
                   </>
@@ -595,7 +593,9 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
               </button>
             </div>
           )}
-          {screen === 'home' ? (
+          {screen === 'studio' ? (
+            <VirtualGarage onBack={() => navigate('garage')} />
+          ) : screen === 'home' ? (
             <>
               <section className="hero">
                 <div className="hero-grid" aria-hidden="true" />
@@ -805,6 +805,7 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
           ) : null}
           {screen === 'garage' && (
             <>
+              <div className="vg-garage-cta"><div><span className="eyebrow">VIRTUAL GARAGE / CONCEPT STUDIO</span><h2>Baue deinen Puma digital.</h2><p>Lack, Felgen und Fahrwerk ausprobieren. Entwürfe lokal speichern.</p></div><button type="button" className="button" onClick={() => navigate('studio')}>Studio öffnen <ArrowUpRight size={17}/></button></div>
               <div className="toolbar">
                 <div className="segmented">
                   <button className={!mine ? 'selected' : ''} onClick={() => setMine(false)}>
