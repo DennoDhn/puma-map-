@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import './driveonyx-2.css';
 import './noir-signature.css';
+import './noir-details.css';
 import { OfflineSupport } from '../components/offline-support';
 export const metadata: Metadata = {
   title: 'PumaMap — Eine Ikone. Deine Community.',
