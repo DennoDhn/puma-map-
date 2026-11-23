@@ -26,6 +26,7 @@ type Props = {
   busy: boolean;
   me: Me | null;
   setMe: (value: Me | null) => void;
+  forumCategories: { name: string; parentName: string | null }[];
   regions: { id: string; name: string }[];
   authSubmit: (event: FormEvent<HTMLFormElement>) => void;
   vehicleSubmit: (event: FormEvent<HTMLFormElement>) => void;
@@ -48,6 +49,7 @@ export default function PlatformDialogs({
   me,
   setMe,
   regions,
+  forumCategories,
   authSubmit,
   vehicleSubmit,
   contentSubmit,
@@ -319,21 +321,39 @@ export default function PlatformDialogs({
           </Field>
           <Field label="Kategorie">
             <select name="category" defaultValue={modal.item?.category ?? 'Allgemein'}>
-              {[
-                'Allgemein',
-                'Motor',
-                'Fahrwerk',
-                'Bremsen',
-                'Elektrik',
-                'Karosserie',
-                'Innenraum',
-                'Wartung',
-                'Teile',
-                'Fahrzeuge',
-                'Treffen',
-              ].map((c) => (
-                <option key={c}>{c}</option>
-              ))}
+              {modal.kind === 'TOPIC' && forumCategories.length ? (
+                <>
+                  {modal.item && !forumCategories.some((c) => c.name === modal.item?.category) && (
+                    <option>{modal.item.category}</option>
+                  )}
+                  {forumCategories
+                    .filter((c) => !c.parentName)
+                    .map((root) => (
+                      <optgroup key={root.name} label={root.name}>
+                        <option>{root.name}</option>
+                        {forumCategories
+                          .filter((c) => c.parentName === root.name)
+                          .map((c) => (
+                            <option key={c.name}>{c.name}</option>
+                          ))}
+                      </optgroup>
+                    ))}
+                </>
+              ) : (
+                [
+                  'Allgemein',
+                  'Motor',
+                  'Fahrwerk',
+                  'Bremsen',
+                  'Elektrik',
+                  'Karosserie',
+                  'Innenraum',
+                  'Wartung',
+                  'Teile',
+                  'Fahrzeuge',
+                  'Treffen',
+                ].map((c) => <option key={c}>{c}</option>)
+              )}
             </select>
           </Field>
           <Field label="Inhalt">

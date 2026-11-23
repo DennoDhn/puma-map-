@@ -187,6 +187,8 @@ export async function handle(request: Request, path: string[]) {
       await db.$queryRaw`SELECT 1`;
       return reply({ status: 'ok' });
     }
+    if (method === 'GET' && route === 'forum-categories')
+      return reply(await db.forumCategory.findMany({ orderBy: { name: 'asc' } }));
     if (method === 'GET' && route === 'regions')
       return reply(await db.region.findMany({ orderBy: { name: 'asc' } }));
     if (method === 'GET' && route === 'me') {
@@ -888,6 +890,16 @@ export async function handle(request: Request, path: string[]) {
             ...(params.get('feed') === 'true' && kind === 'POST'
               ? { kind: { in: ['POST' as const, 'BUILD' as const] } }
               : { kind }),
+            ...(kind === 'TOPIC' && params.get('category')
+              ? {
+                  forumCategory: {
+                    OR: [
+                      { name: params.get('category')! },
+                      { parentName: params.get('category')! },
+                    ],
+                  },
+                }
+              : {}),
             ...(mine ? { authorId: user!.id } : { AND: [publicContentWhere] }),
             ...(q
               ? {

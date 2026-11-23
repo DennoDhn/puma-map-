@@ -282,8 +282,8 @@ Quellbeleg: `src/lib/community.ts`. Prüfbeleg/-grenze: `tests/community.test.ts
 | FORUM-011 | Pagination | Teilweise |
 | FORUM-012 | Moderations-Audit | Teilweise |
 | FORUM-013 | Abonnenten-Benachrichtigungen | Teilweise |
-| FORUM-014 | relationale Kategorien | Nicht implementiert |
-| FORUM-015 | Unterkategorien | Nicht implementiert |
+| FORUM-014 | relationale Kategorien | Teilweise |
+| FORUM-015 | Unterkategorien | Teilweise |
 | FORUM-016 | Zitierfunktion | Nicht implementiert |
 | FORUM-017 | Bilder | Nicht implementiert |
 | FORUM-018 | Anhänge | Nicht implementiert |

@@ -467,6 +467,32 @@ test('community integration with isolated synthetic accounts', async (t) => {
         }
       },
     );
+    await t.test(
+      'forum category hierarchy filters descendants and retains legacy category text',
+      async () => {
+        const child = (
+          await call('contents', 'POST', { ...payload, category: 'Motor' }, alice.cookie)
+        ).data;
+        const legacy = (
+          await call('contents', 'POST', { ...payload, category: 'Eigenes Altthema' }, alice.cookie)
+        ).data;
+        try {
+          const children = (await call('contents?kind=TOPIC&category=Werkstatt')).data;
+          assert.ok(children.some((x: { id: string }) => x.id === child.id));
+          assert.ok(!children.some((x: { id: string }) => x.id === legacy.id));
+          assert.equal(legacy.category, 'Eigenes Altthema');
+          assert.equal(legacy.forumCategoryName, 'Allgemein');
+          assert.ok(
+            (await call('forum-categories')).data.some(
+              (x: { name: string; parentName: string }) =>
+                x.name === 'Motor' && x.parentName === 'Werkstatt',
+            ),
+          );
+        } finally {
+          await db.content.deleteMany({ where: { id: { in: [child.id, legacy.id] } } });
+        }
+      },
+    );
     await t.test('deleting a topic cascades subscriptions and linked notifications', async () => {
       assert.equal((await call(base, 'DELETE', undefined, alice.cookie)).status, 200);
       assert.equal(await db.subscription.count({ where: { contentId: topic.id } }), 0);

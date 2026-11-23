@@ -10,6 +10,21 @@ export async function api(path: string, method = 'GET') {
         return { events: [], listings: [], wiki: [] };
       case '/stats':
         return { members: 0, vehicles: 0, posts: 0, events: 0 };
+      case '/forum-categories':
+        return [
+          ...['Allgemein', 'Community', 'Werkstatt'].map((name) => ({ name, parentName: null })),
+          ...[
+            'Bremsen',
+            'Elektrik',
+            'Fahrwerk',
+            'Innenraum',
+            'Karosserie',
+            'Motor',
+            'Teile',
+            'Wartung',
+          ].map((name) => ({ name, parentName: 'Werkstatt' })),
+          ...['Fahrzeuge', 'Treffen'].map((name) => ({ name, parentName: 'Community' })),
+        ];
       case '/regions':
       case '/vehicles':
       case '/members':

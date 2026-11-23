@@ -128,7 +128,17 @@ model VehicleEntry {
   updatedAt DateTime @updatedAt
   @@index([vehicleId, occurredOn, id])
 }
+model ForumCategory {
+  name String @id
+  parentName String?
+  parent ForumCategory? @relation("CategoryHierarchy",fields:[parentName],references:[name],onDelete:Restrict)
+  children ForumCategory[] @relation("CategoryHierarchy")
+  topics Content[]
+}
 model Content {
+  forumCategoryName String?
+  forumCategory ForumCategory? @relation(fields:[forumCategoryName],references:[name],onDelete:Restrict)
+  @@index([forumCategoryName, createdAt])
   locked Boolean @default(false)
   pinned Boolean @default(false)
   subscriptions Subscription[]

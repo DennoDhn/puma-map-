@@ -152,3 +152,5 @@ Für die Serveranwendung bestanden Typprüfung, ESLint, 15 Unit-/Medientests, de
 Der Produktionsbuild lieferte Manifest und beide PNG-Icons. Firefox übernahm den Service Worker. Nach Stoppen des Servers erschien bei Aufruf einer Fahrzeugroute die öffentliche Offline-Seite; Cache Storage blieb leer. Die Installation auf physischen iOS- und Android-Geräten steht aus.
 
 Der vollständige Firefox-Durchlauf auf drei simulierten Bildschirmgrößen ergab 14 von 18 bestandenen Abläufen. Registrierungs-/Exportablauf (drei Größen) und Fahrzeugverwaltung (Desktop) meldeten Browserabbrüche. Der Browserlauf ist keine vollständige Geräteabnahme.
+
+Nachtrag: Die neunte Migration ordnet Forenthemen einer Kategorie zu und erhält vorhandene Kategorienamen. Der PostgreSQL-Test für Ober-/Unterkategorien und freie Altkategorien ist in `tests/community.test.ts` enthalten. Der gemeldete Auditbefund im Prisma-Abhängigkeitsbaum wurde mit Effect 3.22.5 behoben. Der anschließende lokale npm-Audit meldete null Befunde.

@@ -50,6 +50,8 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
   const [mobile, setMobile] = useState(false);
   const [modal, setModal] = useState<Modal>(null);
   const [stats, setStats] = useState({ members: 0, vehicles: 0, posts: 0, events: 0 });
+  const [forumCategory, setForumCategory] = useState('');
+  const [categories, setCategories] = useState<{ name: string; parentName: string | null }[]>([]);
   const [regions, setRegions] = useState<{ id: string; name: string }[]>([]);
   const [highlights, setHighlights] = useState<{ events: Item[]; listings: Item[]; wiki: Item[] }>({
     events: [],
@@ -89,6 +91,7 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
     setScreen(next);
     setContentPage(1);
     setQuery('');
+    setForumCategory('');
     setMine(false);
     setError('');
     setMobile(false);
@@ -158,10 +161,14 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
             if (screen === 'home') setItems(c);
           }
         } else if (kinds.includes(screen as Kind) || screen === 'saved') {
+          if (screen === 'TOPIC') {
+            const groups = await api<typeof categories>('forum-categories');
+            if (alive) setCategories(groups);
+          }
           const endpoint =
             screen === 'saved'
               ? 'saved?'
-              : `contents?kind=${screen}&feed=${screen === 'POST'}&mine=${mine}&`;
+              : `contents?kind=${screen}&feed=${screen === 'POST'}&mine=${mine}&category=${encodeURIComponent(forumCategory)}&`;
           const c = await api<{ items: Item[]; hasMore: boolean }>(
             `${endpoint}q=${encodeURIComponent(query)}&page=${contentPage}`,
           );
@@ -190,7 +197,7 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
     return () => {
       alive = false;
     };
-  }, [screen, mine, query, revision, me?.shareRegion, contentPage]);
+  }, [screen, mine, query, revision, me?.shareRegion, contentPage, forumCategory]);
   useEffect(() => {
     if (!toast) return;
     const id = setTimeout(() => setToast(''), 7000);
@@ -854,6 +861,34 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
                   )}
                 </div>
               </div>
+              {screen === 'TOPIC' && (
+                <label className="field">
+                  <span>Forum nach Kategorie filtern</span>
+                  <select
+                    value={forumCategory}
+                    onChange={(event) => {
+                      setContentPage(1);
+                      setForumCategory(event.target.value);
+                    }}
+                  >
+                    <option value="">Alle Kategorien</option>
+                    {categories
+                      .filter((c) => !c.parentName)
+                      .map((root) => (
+                        <optgroup key={root.name} label={root.name}>
+                          <option value={root.name}>
+                            {root.name} einschließlich Unterkategorien
+                          </option>
+                          {categories
+                            .filter((c) => c.parentName === root.name)
+                            .map((c) => (
+                              <option key={c.name}>{c.name}</option>
+                            ))}
+                        </optgroup>
+                      ))}
+                  </select>
+                </label>
+              )}
               {loading ? (
                 <div className="skeleton loading-panel" />
               ) : items.length ? (
@@ -1185,6 +1220,7 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
           me={me}
           setMe={setMe}
           regions={regions}
+          forumCategories={categories}
           authSubmit={authSubmit}
           vehicleSubmit={vehicleSubmit}
           contentSubmit={contentSubmit}

@@ -1499,7 +1499,7 @@
     "id": "FORUM-014",
     "module": "Forum",
     "requirement": "relationale Kategorien",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/lib/community.ts",
     "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
   },
@@ -1507,7 +1507,7 @@
     "id": "FORUM-015",
     "module": "Forum",
     "requirement": "Unterkategorien",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/lib/community.ts",
     "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
   },
