@@ -1,0 +1,3906 @@
+[
+  {
+    "id": "HOME-001",
+    "module": "Startseite",
+    "requirement": "Hero mit eigenem Fahrzeugmotiv",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-002",
+    "module": "Startseite",
+    "requirement": "Registrierung/Anmeldung",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-003",
+    "module": "Startseite",
+    "requirement": "echte Live-Statistiken",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-004",
+    "module": "Startseite",
+    "requirement": "Fahrzeugvorschau",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-005",
+    "module": "Startseite",
+    "requirement": "aktuelle Beiträge",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-006",
+    "module": "Startseite",
+    "requirement": "kuratierte Featured Builds",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-007",
+    "module": "Startseite",
+    "requirement": "neue Mitglieder",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-008",
+    "module": "Startseite",
+    "requirement": "Eventvorschau",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-009",
+    "module": "Startseite",
+    "requirement": "Marktplatz-Highlights",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-010",
+    "module": "Startseite",
+    "requirement": "Club-Highlights",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-011",
+    "module": "Startseite",
+    "requirement": "Wiki-Neuigkeiten",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "HOME-012",
+    "module": "Startseite",
+    "requirement": "Aktivitätsstrom",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "AUTH-001",
+    "module": "Benutzerkonten",
+    "requirement": "Registrierung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-002",
+    "module": "Benutzerkonten",
+    "requirement": "Anmeldung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-003",
+    "module": "Benutzerkonten",
+    "requirement": "Abmeldung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-004",
+    "module": "Benutzerkonten",
+    "requirement": "E-Mail-Verifizierung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-005",
+    "module": "Benutzerkonten",
+    "requirement": "Passwort-Reset",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-006",
+    "module": "Benutzerkonten",
+    "requirement": "sichere Sessions",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-007",
+    "module": "Benutzerkonten",
+    "requirement": "serverseitige Validierung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-008",
+    "module": "Benutzerkonten",
+    "requirement": "Benutzername",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-009",
+    "module": "Benutzerkonten",
+    "requirement": "Profilbeschreibung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-010",
+    "module": "Benutzerkonten",
+    "requirement": "regionale Standortfreigabe",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-011",
+    "module": "Benutzerkonten",
+    "requirement": "Profilbearbeitung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-012",
+    "module": "Benutzerkonten",
+    "requirement": "Datenexport",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-013",
+    "module": "Benutzerkonten",
+    "requirement": "Account-Löschung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-014",
+    "module": "Benutzerkonten",
+    "requirement": "Profilbild",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-015",
+    "module": "Benutzerkonten",
+    "requirement": "Titelbild",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-016",
+    "module": "Benutzerkonten",
+    "requirement": "Passwortänderung im Konto",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-017",
+    "module": "Benutzerkonten",
+    "requirement": "granulare Profilsichtbarkeit",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-018",
+    "module": "Benutzerkonten",
+    "requirement": "MFA für privilegierte Konten",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "AUTH-019",
+    "module": "Benutzerkonten",
+    "requirement": "produktive E-Mail-Zustellung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PROFILE-001",
+    "module": "Mitgliederprofile",
+    "requirement": "öffentliche Profilübersicht",
+    "status": "Teilweise",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-002",
+    "module": "Mitgliederprofile",
+    "requirement": "öffentliche Fahrzeugliste",
+    "status": "Teilweise",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-003",
+    "module": "Mitgliederprofile",
+    "requirement": "öffentliche Builds und Beiträge",
+    "status": "Teilweise",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-004",
+    "module": "Mitgliederprofile",
+    "requirement": "öffentliche Inhaltsstatistiken",
+    "status": "Teilweise",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-005",
+    "module": "Mitgliederprofile",
+    "requirement": "Region nur mit Einwilligung",
+    "status": "Teilweise",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-006",
+    "module": "Mitgliederprofile",
+    "requirement": "Verknüpfungen zu Fahrzeugen und Inhalten",
+    "status": "Teilweise",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-007",
+    "module": "Mitgliederprofile",
+    "requirement": "Profil-Tabs",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-008",
+    "module": "Mitgliederprofile",
+    "requirement": "vollständige Aktivitätspagination",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-009",
+    "module": "Mitgliederprofile",
+    "requirement": "Clubmitgliedschaften",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-010",
+    "module": "Mitgliederprofile",
+    "requirement": "Auszeichnungen",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-011",
+    "module": "Mitgliederprofile",
+    "requirement": "Profilrahmen",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-012",
+    "module": "Mitgliederprofile",
+    "requirement": "öffentliche Favoriten-Einwilligung",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-013",
+    "module": "Mitgliederprofile",
+    "requirement": "eigene Profil-URLs",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "PROFILE-014",
+    "module": "Mitgliederprofile",
+    "requirement": "Sammlerprofile",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform-dialogs.tsx",
+    "evidence": "tests/community.test.ts"
+  },
+  {
+    "id": "MAP-001",
+    "module": "Community-Karte",
+    "requirement": "interaktive Regionalkarte",
+    "status": "Teilweise",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-002",
+    "module": "Community-Karte",
+    "requirement": "Mitgliederfilter",
+    "status": "Teilweise",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-003",
+    "module": "Community-Karte",
+    "requirement": "regionale Markergruppen",
+    "status": "Teilweise",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-004",
+    "module": "Community-Karte",
+    "requirement": "markergebundene Popups",
+    "status": "Teilweise",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-005",
+    "module": "Community-Karte",
+    "requirement": "Profilzugriff",
+    "status": "Teilweise",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-006",
+    "module": "Community-Karte",
+    "requirement": "Zustimmung vor externen Tiles",
+    "status": "Teilweise",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-007",
+    "module": "Community-Karte",
+    "requirement": "Standortwiderruf",
+    "status": "Teilweise",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-008",
+    "module": "Community-Karte",
+    "requirement": "eingeschränkte Kartennutzung ohne Freigabe",
+    "status": "Teilweise",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-009",
+    "module": "Community-Karte",
+    "requirement": "Stadt-/PLZ-Geocoding",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-010",
+    "module": "Community-Karte",
+    "requirement": "dynamisches viewportbasiertes Clustering",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-011",
+    "module": "Community-Karte",
+    "requirement": "Fahrzeugvariantenfilter",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-012",
+    "module": "Community-Karte",
+    "requirement": "Clubmarker",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-013",
+    "module": "Community-Karte",
+    "requirement": "Eventmarker",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-014",
+    "module": "Community-Karte",
+    "requirement": "Treffen/Ausfahrten-Marker",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-015",
+    "module": "Community-Karte",
+    "requirement": "große Datenmengen unter Last",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MAP-016",
+    "module": "Community-Karte",
+    "requirement": "Popup-Abnahme bei Zoom und Resize auf echten Geräten",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-map.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-001",
+    "module": "Fahrzeuggarage",
+    "requirement": "mehrere Fahrzeuge",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-002",
+    "module": "Fahrzeuggarage",
+    "requirement": "Fahrzeuganlage/Bearbeitung/Löschung",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-003",
+    "module": "Fahrzeuggarage",
+    "requirement": "Name/Variante/Baujahr",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-004",
+    "module": "Fahrzeuggarage",
+    "requirement": "Motorisierungsangabe",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-005",
+    "module": "Fahrzeuggarage",
+    "requirement": "Leistung/Laufleistung/Farbe",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-006",
+    "module": "Fahrzeuggarage",
+    "requirement": "Beschreibung",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-007",
+    "module": "Fahrzeuggarage",
+    "requirement": "öffentlich/private Fahrzeuge",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-008",
+    "module": "Fahrzeuggarage",
+    "requirement": "Fahrzeugdetail-URLs",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-009",
+    "module": "Fahrzeuggarage",
+    "requirement": "Wartungs- und Reparaturjournal",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-010",
+    "module": "Fahrzeuggarage",
+    "requirement": "Build-Einträge",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-011",
+    "module": "Fahrzeuggarage",
+    "requirement": "Kategorien/Fortschritt",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-012",
+    "module": "Fahrzeuggarage",
+    "requirement": "Historienfilter und Pagination",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-013",
+    "module": "Fahrzeuggarage",
+    "requirement": "private Kosten",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-014",
+    "module": "Fahrzeuggarage",
+    "requirement": "Änderungsschutz durch Revisionen",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-015",
+    "module": "Fahrzeuggarage",
+    "requirement": "private Versionswiederherstellung",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-016",
+    "module": "Fahrzeuggarage",
+    "requirement": "begrenzte Snapshot-Aufbewahrung",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-017",
+    "module": "Fahrzeuggarage",
+    "requirement": "Metadaten-Änderungsprotokoll",
+    "status": "Teilweise",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-018",
+    "module": "Fahrzeuggarage",
+    "requirement": "geschützter Dokumententresor",
+    "status": "Nicht implementiert",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-019",
+    "module": "Fahrzeuggarage",
+    "requirement": "Wartungsplanung",
+    "status": "Nicht implementiert",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-020",
+    "module": "Fahrzeuggarage",
+    "requirement": "Wartungserinnerungen",
+    "status": "Nicht implementiert",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-021",
+    "module": "Fahrzeuggarage",
+    "requirement": "Fahrzeugvergleich",
+    "status": "Nicht implementiert",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-022",
+    "module": "Fahrzeuggarage",
+    "requirement": "strukturierte technische Datenblätter",
+    "status": "Nicht implementiert",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-023",
+    "module": "Fahrzeuggarage",
+    "requirement": "Fahrzeugzustandskatalog",
+    "status": "Nicht implementiert",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "GARAGE-024",
+    "module": "Fahrzeuggarage",
+    "requirement": "seltene Modellvarianten-Datenbank",
+    "status": "Nicht implementiert",
+    "source": "src/components/vehicle-dossier.tsx",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-001",
+    "module": "Automotive Media Engine",
+    "requirement": "mehrere Fahrzeugbilder",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-002",
+    "module": "Automotive Media Engine",
+    "requirement": "Titelbild",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-003",
+    "module": "Automotive Media Engine",
+    "requirement": "Reihenfolge",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-004",
+    "module": "Automotive Media Engine",
+    "requirement": "Bildbeschreibungen",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-005",
+    "module": "Automotive Media Engine",
+    "requirement": "Ersetzen/Löschen",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-006",
+    "module": "Automotive Media Engine",
+    "requirement": "Dateiinhaltsprüfung",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-007",
+    "module": "Automotive Media Engine",
+    "requirement": "Größen-/Pixelgrenzen",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-008",
+    "module": "Automotive Media Engine",
+    "requirement": "Metadatenbereinigung",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-009",
+    "module": "Automotive Media Engine",
+    "requirement": "transaktionale Bildablage",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-010",
+    "module": "Automotive Media Engine",
+    "requirement": "private Zugriffsprüfung",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-011",
+    "module": "Automotive Media Engine",
+    "requirement": "Vorschaubilder",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-012",
+    "module": "Automotive Media Engine",
+    "requirement": "vergrößerte Galerie",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-013",
+    "module": "Automotive Media Engine",
+    "requirement": "Touch/Keyboard-Galerie",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-014",
+    "module": "Automotive Media Engine",
+    "requirement": "Vorher-Nachher-Vergleich",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-015",
+    "module": "Automotive Media Engine",
+    "requirement": "Medienzuordnung zu Journal/Teilen/Meilensteinen",
+    "status": "Teilweise",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-016",
+    "module": "Automotive Media Engine",
+    "requirement": "Social-Post-Bilder",
+    "status": "Nicht implementiert",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-017",
+    "module": "Automotive Media Engine",
+    "requirement": "Profil-/Titelbilder",
+    "status": "Nicht implementiert",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-018",
+    "module": "Automotive Media Engine",
+    "requirement": "Forum-Anhänge",
+    "status": "Nicht implementiert",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-019",
+    "module": "Automotive Media Engine",
+    "requirement": "Marktplatzgalerien",
+    "status": "Nicht implementiert",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-020",
+    "module": "Automotive Media Engine",
+    "requirement": "Eventbilder",
+    "status": "Nicht implementiert",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-021",
+    "module": "Automotive Media Engine",
+    "requirement": "Virenscan für Dokumente",
+    "status": "Nicht implementiert",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-022",
+    "module": "Automotive Media Engine",
+    "requirement": "Object-Storage-Betrieb",
+    "status": "Nicht implementiert",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "MEDIA-023",
+    "module": "Automotive Media Engine",
+    "requirement": "belastbare Multiworker-Upload-Lasttests",
+    "status": "Nicht implementiert",
+    "source": "src/lib/media.ts",
+    "evidence": "tests/media.test.ts; tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-001",
+    "module": "Teileverwaltung",
+    "requirement": "Teile-CRUD",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-002",
+    "module": "Teileverwaltung",
+    "requirement": "Kategorie",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-003",
+    "module": "Teileverwaltung",
+    "requirement": "Hersteller",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-004",
+    "module": "Teileverwaltung",
+    "requirement": "benutzereigene Teilenummer",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-005",
+    "module": "Teileverwaltung",
+    "requirement": "Zustand",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-006",
+    "module": "Teileverwaltung",
+    "requirement": "Einbaudatum/Kilometerstand",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-007",
+    "module": "Teileverwaltung",
+    "requirement": "private Bezugsquelle",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-008",
+    "module": "Teileverwaltung",
+    "requirement": "privater Kaufpreis",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-009",
+    "module": "Teileverwaltung",
+    "requirement": "Notizen",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-010",
+    "module": "Teileverwaltung",
+    "requirement": "Bilder",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-011",
+    "module": "Teileverwaltung",
+    "requirement": "Installationsstatus",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-012",
+    "module": "Teileverwaltung",
+    "requirement": "Fahrzeugzuordnung",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-013",
+    "module": "Teileverwaltung",
+    "requirement": "Journalverknüpfung",
+    "status": "Teilweise",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-014",
+    "module": "Teileverwaltung",
+    "requirement": "Mehrfach-Teileverknüpfungen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-015",
+    "module": "Teileverwaltung",
+    "requirement": "Dokumente",
+    "status": "Nicht implementiert",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-016",
+    "module": "Teileverwaltung",
+    "requirement": "globale Suche/Filter/Sortierung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-017",
+    "module": "Teileverwaltung",
+    "requirement": "Teilegruppen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-018",
+    "module": "Teileverwaltung",
+    "requirement": "Ein-/Ausbauhistorie",
+    "status": "Nicht implementiert",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-019",
+    "module": "Teileverwaltung",
+    "requirement": "Teilevergleich",
+    "status": "Nicht implementiert",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-020",
+    "module": "Teileverwaltung",
+    "requirement": "private Bestandslisten",
+    "status": "Nicht implementiert",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-021",
+    "module": "Teileverwaltung",
+    "requirement": "Wiki-/Marktplatz-Relationen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "PARTS-022",
+    "module": "Teileverwaltung",
+    "requirement": "geprüfte Kompatibilitäten",
+    "status": "Nicht implementiert",
+    "source": "src/lib/vehicle-workspace.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-001",
+    "module": "Build-Management",
+    "requirement": "explizite Veröffentlichung aus Journal",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-002",
+    "module": "Build-Management",
+    "requirement": "gemeinsame Quellreferenz statt automatischer Veröffentlichung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-003",
+    "module": "Build-Management",
+    "requirement": "öffentliches Build-Profil als Inhaltsseite",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-004",
+    "module": "Build-Management",
+    "requirement": "Kommentare",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-005",
+    "module": "Build-Management",
+    "requirement": "Likes",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-006",
+    "module": "Build-Management",
+    "requirement": "Favoriten",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-007",
+    "module": "Build-Management",
+    "requirement": "Direktlinks",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-008",
+    "module": "Build-Management",
+    "requirement": "Fortschritt",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-009",
+    "module": "Build-Management",
+    "requirement": "Kategorien",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-010",
+    "module": "Build-Management",
+    "requirement": "chronologische Journalansicht",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-011",
+    "module": "Build-Management",
+    "requirement": "Meilenstein-CRUD",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-012",
+    "module": "Build-Management",
+    "requirement": "Status/Zieltermin/Abschlussdatum",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-013",
+    "module": "Build-Management",
+    "requirement": "Meilenstein-Bilder",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-014",
+    "module": "Build-Management",
+    "requirement": "Verknüpfung eines Teils/Eintrags",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-015",
+    "module": "Build-Management",
+    "requirement": "sofortige Zugriffssperre bei Sichtbarkeitswiderruf",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-016",
+    "module": "Build-Management",
+    "requirement": "mehrere eigenständige Projekte pro Fahrzeug",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-017",
+    "module": "Build-Management",
+    "requirement": "Projektphasen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-018",
+    "module": "Build-Management",
+    "requirement": "Aufgabenlisten",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-019",
+    "module": "Build-Management",
+    "requirement": "globale interaktive Projekt-Timeline",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-020",
+    "module": "Build-Management",
+    "requirement": "mehrere Teile pro Meilenstein",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-021",
+    "module": "Build-Management",
+    "requirement": "Rankings",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-022",
+    "module": "Build-Management",
+    "requirement": "Forum-/Wiki-Verknüpfungspicker",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "BUILD-023",
+    "module": "Build-Management",
+    "requirement": "vollständige Build-Galerie mit Filtern",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "FEED-001",
+    "module": "Community Feed",
+    "requirement": "Textbeiträge erstellen/bearbeiten/löschen",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-002",
+    "module": "Community Feed",
+    "requirement": "Kommentare",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-003",
+    "module": "Community Feed",
+    "requirement": "Antworten mit Elternreferenz",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-004",
+    "module": "Community Feed",
+    "requirement": "eigene Kommentare bearbeiten/entfernen",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-005",
+    "module": "Community Feed",
+    "requirement": "Like",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-006",
+    "module": "Community Feed",
+    "requirement": "Speichern",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-007",
+    "module": "Community Feed",
+    "requirement": "Direktlinks",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-008",
+    "module": "Community Feed",
+    "requirement": "Textsuche",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-009",
+    "module": "Community Feed",
+    "requirement": "serverseitige Pagination",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-010",
+    "module": "Community Feed",
+    "requirement": "Meldung von Inhalten",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-011",
+    "module": "Community Feed",
+    "requirement": "Moderationsstatus",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-012",
+    "module": "Community Feed",
+    "requirement": "Fahrzeugverknüpfung für verknüpfte Builds",
+    "status": "Teilweise",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-013",
+    "module": "Community Feed",
+    "requirement": "mehrere Beitragsbilder",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-014",
+    "module": "Community Feed",
+    "requirement": "Bildlöschung",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-015",
+    "module": "Community Feed",
+    "requirement": "weitere Reaktionstypen",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-016",
+    "module": "Community Feed",
+    "requirement": "Teilen-Dialog/Web Share",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-017",
+    "module": "Community Feed",
+    "requirement": "Hashtags",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-018",
+    "module": "Community Feed",
+    "requirement": "Erwähnungen",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-019",
+    "module": "Community Feed",
+    "requirement": "allgemeine Profil-/Fahrzeug-/Build-Linkpicker",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-020",
+    "module": "Community Feed",
+    "requirement": "Feed-Sortierauswahl",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FEED-021",
+    "module": "Community Feed",
+    "requirement": "optimistische Konfliktkontrolle für Social-Edits",
+    "status": "Nicht implementiert",
+    "source": "src/components/platform.tsx",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "FORUM-001",
+    "module": "Forum",
+    "requirement": "Themen erstellen/bearbeiten/löschen",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-002",
+    "module": "Forum",
+    "requirement": "Kategorien als Texte",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-003",
+    "module": "Forum",
+    "requirement": "Antworten",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-004",
+    "module": "Forum",
+    "requirement": "Antwortbezüge",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-005",
+    "module": "Forum",
+    "requirement": "eigene Antwortbearbeitung",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-006",
+    "module": "Forum",
+    "requirement": "Soft-Delete mit erhaltener Antwortstruktur",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-007",
+    "module": "Forum",
+    "requirement": "Themen schließen/öffnen",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-008",
+    "module": "Forum",
+    "requirement": "Themen anheften",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-009",
+    "module": "Forum",
+    "requirement": "Themenabonnements",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-010",
+    "module": "Forum",
+    "requirement": "Suchfunktion",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-011",
+    "module": "Forum",
+    "requirement": "Pagination",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-012",
+    "module": "Forum",
+    "requirement": "Moderations-Audit",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-013",
+    "module": "Forum",
+    "requirement": "Abonnenten-Benachrichtigungen",
+    "status": "Teilweise",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-014",
+    "module": "Forum",
+    "requirement": "relationale Kategorien",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-015",
+    "module": "Forum",
+    "requirement": "Unterkategorien",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-016",
+    "module": "Forum",
+    "requirement": "Zitierfunktion",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-017",
+    "module": "Forum",
+    "requirement": "Bilder",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-018",
+    "module": "Forum",
+    "requirement": "Anhänge",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-019",
+    "module": "Forum",
+    "requirement": "eigene Themenansicht außerhalb Modal",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-020",
+    "module": "Forum",
+    "requirement": "interne Vorschaukarten für Profile/Fahrzeuge/Builds/Wiki/Teile/Angebote/Events",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-021",
+    "module": "Forum",
+    "requirement": "einzelne Kommentarmeldungen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-022",
+    "module": "Forum",
+    "requirement": "Moderationsbegründung für Kommentarentfernung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "FORUM-023",
+    "module": "Forum",
+    "requirement": "Abonnements über 500 mit Queue",
+    "status": "Nicht implementiert",
+    "source": "src/lib/community.ts",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "MARKET-001",
+    "module": "Marktplatz",
+    "requirement": "Textinserate",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-002",
+    "module": "Marktplatz",
+    "requirement": "Inserate bearbeiten/löschen",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-003",
+    "module": "Marktplatz",
+    "requirement": "Preis",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-004",
+    "module": "Marktplatz",
+    "requirement": "Kategorie",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-005",
+    "module": "Marktplatz",
+    "requirement": "Region",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-006",
+    "module": "Marktplatz",
+    "requirement": "Suche",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-007",
+    "module": "Marktplatz",
+    "requirement": "Favoriten",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-008",
+    "module": "Marktplatz",
+    "requirement": "Verkäuferprofil",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-009",
+    "module": "Marktplatz",
+    "requirement": "verfügbar/reserviert/verkauft",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-010",
+    "module": "Marktplatz",
+    "requirement": "Meldungen",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-011",
+    "module": "Marktplatz",
+    "requirement": "Moderation",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-012",
+    "module": "Marktplatz",
+    "requirement": "keine Echtgeld-Zahlungsabwicklung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-013",
+    "module": "Marktplatz",
+    "requirement": "getrennte Ersatzteil-/Fahrzeug-/Zubehör-/Suchanzeigen-/Projektfahrzeug-/Teilepakettypen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-014",
+    "module": "Marktplatz",
+    "requirement": "Bildergalerien",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-015",
+    "module": "Marktplatz",
+    "requirement": "Zustand",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-016",
+    "module": "Marktplatz",
+    "requirement": "strukturierte Filter",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-017",
+    "module": "Marktplatz",
+    "requirement": "private Verkäuferanfragen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-018",
+    "module": "Marktplatz",
+    "requirement": "Inseratsverwaltung-Dashboard",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-019",
+    "module": "Marktplatz",
+    "requirement": "Archivierung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "MARKET-020",
+    "module": "Marktplatz",
+    "requirement": "rechtlich geprüfte Pflichtangaben",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-001",
+    "module": "Technisches Wiki",
+    "requirement": "Artikelentwurf",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-002",
+    "module": "Technisches Wiki",
+    "requirement": "Bearbeitung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-003",
+    "module": "Technisches Wiki",
+    "requirement": "Quellenpflicht",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-004",
+    "module": "Technisches Wiki",
+    "requirement": "Textsuche",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-005",
+    "module": "Technisches Wiki",
+    "requirement": "Kategorien als Texte",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-006",
+    "module": "Technisches Wiki",
+    "requirement": "Versionshistorie",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-007",
+    "module": "Technisches Wiki",
+    "requirement": "unabhängige redaktionelle Freigabe",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-008",
+    "module": "Technisches Wiki",
+    "requirement": "Moderation",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-009",
+    "module": "Technisches Wiki",
+    "requirement": "Tags",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-010",
+    "module": "Technisches Wiki",
+    "requirement": "Versionsvergleich und Wiederherstellung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-011",
+    "module": "Technisches Wiki",
+    "requirement": "strukturierte Teileverknüpfung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-012",
+    "module": "Technisches Wiki",
+    "requirement": "Fahrzeugbezüge",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-013",
+    "module": "Technisches Wiki",
+    "requirement": "geprüfte Fachinhalte Motor/Getriebe/Fahrwerk/Bremsen/Elektrik/Karosserie/Innenraum",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-014",
+    "module": "Technisches Wiki",
+    "requirement": "Wartungs-/Reparaturanleitungen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-015",
+    "module": "Technisches Wiki",
+    "requirement": "Teilenummern-/Kompatibilitätsdatenbank",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-016",
+    "module": "Technisches Wiki",
+    "requirement": "Kaufberatung/Schwachstellen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "WIKI-017",
+    "module": "Technisches Wiki",
+    "requirement": "technische Daten/Modellgeschichte",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-001",
+    "module": "Events",
+    "requirement": "Eventanlage",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-002",
+    "module": "Events",
+    "requirement": "Datum/Uhrzeit",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-003",
+    "module": "Events",
+    "requirement": "öffentlicher Treffpunkt",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-004",
+    "module": "Events",
+    "requirement": "Beschreibung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-005",
+    "module": "Events",
+    "requirement": "Anmeldung/Abmeldung",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-006",
+    "module": "Events",
+    "requirement": "Teilnehmerzahl",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-007",
+    "module": "Events",
+    "requirement": "Kommentare",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-008",
+    "module": "Events",
+    "requirement": "Bilder",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-009",
+    "module": "Events",
+    "requirement": "Teilnehmer-Privatsphäre",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-010",
+    "module": "Events",
+    "requirement": "Eventkarte",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-011",
+    "module": "Events",
+    "requirement": "wiederkehrende Treffen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-012",
+    "module": "Events",
+    "requirement": "private Events",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-013",
+    "module": "Events",
+    "requirement": "Einladungen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-014",
+    "module": "Events",
+    "requirement": "Eventbenachrichtigungen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-015",
+    "module": "Events",
+    "requirement": "Archiv vergangener Treffen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "EVENT-016",
+    "module": "Events",
+    "requirement": "Clubs-Verknüpfung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts"
+  },
+  {
+    "id": "CLUB-001",
+    "module": "Clubs und Crews",
+    "requirement": "Cluberstellung",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-002",
+    "module": "Clubs und Crews",
+    "requirement": "Clublogo",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-003",
+    "module": "Clubs und Crews",
+    "requirement": "Beschreibung/Region",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-004",
+    "module": "Clubs und Crews",
+    "requirement": "Clubprofil",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-005",
+    "module": "Clubs und Crews",
+    "requirement": "Mitgliederliste",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-006",
+    "module": "Clubs und Crews",
+    "requirement": "Rollen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-007",
+    "module": "Clubs und Crews",
+    "requirement": "Beitrittsanfragen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-008",
+    "module": "Clubs und Crews",
+    "requirement": "Clubfeed",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-009",
+    "module": "Clubs und Crews",
+    "requirement": "interne Diskussionen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-010",
+    "module": "Clubs und Crews",
+    "requirement": "Clubevents",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-011",
+    "module": "Clubs und Crews",
+    "requirement": "Gruppenverwaltung",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-012",
+    "module": "Clubs und Crews",
+    "requirement": "öffentliche/private Gruppen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-013",
+    "module": "Clubs und Crews",
+    "requirement": "Karten-/Fahrzeugverknüpfung",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "CLUB-014",
+    "module": "Clubs und Crews",
+    "requirement": "Clubstatistiken",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-001",
+    "module": "Onyx-Reputation",
+    "requirement": "virtuelle Onyx-Punkte ohne Geldwert",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-002",
+    "module": "Onyx-Reputation",
+    "requirement": "serverseitige Vergaberegeln",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-003",
+    "module": "Onyx-Reputation",
+    "requirement": "idempotentes Transaktionsledger",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-004",
+    "module": "Onyx-Reputation",
+    "requirement": "Farming-/Missbrauchsschutz",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-005",
+    "module": "Onyx-Reputation",
+    "requirement": "Erfahrungspunkte",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-006",
+    "module": "Onyx-Reputation",
+    "requirement": "Level",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-007",
+    "module": "Onyx-Reputation",
+    "requirement": "Ränge",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-008",
+    "module": "Onyx-Reputation",
+    "requirement": "Community Score",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-009",
+    "module": "Onyx-Reputation",
+    "requirement": "Fortschrittsanzeigen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-010",
+    "module": "Onyx-Reputation",
+    "requirement": "Mitgliedstitel",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-011",
+    "module": "Onyx-Reputation",
+    "requirement": "Ranglisten",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-012",
+    "module": "Onyx-Reputation",
+    "requirement": "Eventauszeichnungen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "POINT-013",
+    "module": "Onyx-Reputation",
+    "requirement": "langjährige Mitgliedschaft",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-001",
+    "module": "Achievements",
+    "requirement": "Fahrzeugprojekt-Auszeichnungen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-002",
+    "module": "Achievements",
+    "requirement": "technische Beiträge",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-003",
+    "module": "Achievements",
+    "requirement": "hilfreiche Antworten",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-004",
+    "module": "Achievements",
+    "requirement": "Community-Aktivität",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-005",
+    "module": "Achievements",
+    "requirement": "Eventteilnahme",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-006",
+    "module": "Achievements",
+    "requirement": "seltene Fahrzeuge",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-007",
+    "module": "Achievements",
+    "requirement": "Meilensteine",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-008",
+    "module": "Achievements",
+    "requirement": "Seltenheitsstufen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-009",
+    "module": "Achievements",
+    "requirement": "individuelle Metallic-Badges",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-010",
+    "module": "Achievements",
+    "requirement": "Profilrahmen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-011",
+    "module": "Achievements",
+    "requirement": "Freischaltanimation",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "AWARD-012",
+    "module": "Achievements",
+    "requirement": "Verwaltung der Vergaberegeln",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-001",
+    "module": "Legacy Center",
+    "requirement": "Hall of Fame",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-002",
+    "module": "Legacy Center",
+    "requirement": "Community Heroes",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-003",
+    "module": "Legacy Center",
+    "requirement": "Memorial Wall",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-004",
+    "module": "Legacy Center",
+    "requirement": "Legend Garage",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-005",
+    "module": "Legacy Center",
+    "requirement": "besondere Builds",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-006",
+    "module": "Legacy Center",
+    "requirement": "Community-Geschichte",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-007",
+    "module": "Legacy Center",
+    "requirement": "langjährige Mitglieder",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-008",
+    "module": "Legacy Center",
+    "requirement": "besondere Leistungen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-009",
+    "module": "Legacy Center",
+    "requirement": "Legacy Timeline",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-010",
+    "module": "Legacy Center",
+    "requirement": "Einwilligung/Privatsphäre für Gedenkeinträge",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "LEGACY-011",
+    "module": "Legacy Center",
+    "requirement": "redaktionelle Moderation",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "NOTICE-001",
+    "module": "Benachrichtigungen",
+    "requirement": "persistente Kommentare-/Antworten-Benachrichtigungen",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-002",
+    "module": "Benachrichtigungen",
+    "requirement": "Forenabonnements",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-003",
+    "module": "Benachrichtigungen",
+    "requirement": "optionale Like-Benachrichtigungen",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-004",
+    "module": "Benachrichtigungen",
+    "requirement": "Build-Kommentare",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-005",
+    "module": "Benachrichtigungen",
+    "requirement": "Moderationsmitteilungen",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-006",
+    "module": "Benachrichtigungen",
+    "requirement": "gelesen/ungelesen",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-007",
+    "module": "Benachrichtigungen",
+    "requirement": "einzeln öffnen",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-008",
+    "module": "Benachrichtigungen",
+    "requirement": "alle gelesen markieren",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-009",
+    "module": "Benachrichtigungen",
+    "requirement": "Einstellungen",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-010",
+    "module": "Benachrichtigungen",
+    "requirement": "Deduplizierung",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-011",
+    "module": "Benachrichtigungen",
+    "requirement": "Sichtbarkeitsprüfung beim Lesen",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-012",
+    "module": "Benachrichtigungen",
+    "requirement": "Benachrichtigungspagination jenseits der letzten 50",
+    "status": "Teilweise",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-013",
+    "module": "Benachrichtigungen",
+    "requirement": "Erwähnungen",
+    "status": "Nicht implementiert",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-014",
+    "module": "Benachrichtigungen",
+    "requirement": "Follower",
+    "status": "Nicht implementiert",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-015",
+    "module": "Benachrichtigungen",
+    "requirement": "Marktanfragen",
+    "status": "Nicht implementiert",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-016",
+    "module": "Benachrichtigungen",
+    "requirement": "Eventeinladungen",
+    "status": "Nicht implementiert",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-017",
+    "module": "Benachrichtigungen",
+    "requirement": "Clubanfragen",
+    "status": "Nicht implementiert",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-018",
+    "module": "Benachrichtigungen",
+    "requirement": "Achievement-Meldungen",
+    "status": "Nicht implementiert",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-019",
+    "module": "Benachrichtigungen",
+    "requirement": "Gruppierung",
+    "status": "Nicht implementiert",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "NOTICE-020",
+    "module": "Benachrichtigungen",
+    "requirement": "Push/E-Mail-Kanäle",
+    "status": "Nicht implementiert",
+    "source": "src/components/notification-center.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-001",
+    "module": "Community-Suche",
+    "requirement": "Mitgliedersuche",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-002",
+    "module": "Community-Suche",
+    "requirement": "Fahrzeugsuche",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-003",
+    "module": "Community-Suche",
+    "requirement": "Buildsuche",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-004",
+    "module": "Community-Suche",
+    "requirement": "Beitragssuche",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-005",
+    "module": "Community-Suche",
+    "requirement": "Forensuche",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-006",
+    "module": "Community-Suche",
+    "requirement": "Bereichsfilter",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-007",
+    "module": "Community-Suche",
+    "requirement": "neueste/älteste Sortierung",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-008",
+    "module": "Community-Suche",
+    "requirement": "Pagination",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-009",
+    "module": "Community-Suche",
+    "requirement": "Ergebnisvorschau",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-010",
+    "module": "Community-Suche",
+    "requirement": "Leer-/Fehler-/Ladezustände",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-011",
+    "module": "Community-Suche",
+    "requirement": "private Inhalte ausgeschlossen",
+    "status": "Teilweise",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-012",
+    "module": "Community-Suche",
+    "requirement": "Wiki-/Markt-/Club-/Eventsuche",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-013",
+    "module": "Community-Suche",
+    "requirement": "datenbankseitiger Volltextindex",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-014",
+    "module": "Community-Suche",
+    "requirement": "Suchranking",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "SEARCH-015",
+    "module": "Community-Suche",
+    "requirement": "Performance-Messung mit realistischen Datenmengen",
+    "status": "Nicht implementiert",
+    "source": "src/components/community-discovery.tsx",
+    "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
+  },
+  {
+    "id": "ADMIN-001",
+    "module": "Administration",
+    "requirement": "RBAC Member/Moderator/Admin",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-002",
+    "module": "Administration",
+    "requirement": "serverseitige Prüfungen",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-003",
+    "module": "Administration",
+    "requirement": "Inhaltsmeldungen",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-004",
+    "module": "Administration",
+    "requirement": "Meldungsbearbeitung durch Moderation",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-005",
+    "module": "Administration",
+    "requirement": "Wiki-Freigabequeue",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-006",
+    "module": "Administration",
+    "requirement": "Inhalte ausblenden/freigeben",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-007",
+    "module": "Administration",
+    "requirement": "Themenstatus",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-008",
+    "module": "Administration",
+    "requirement": "Kommentare entfernen",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-009",
+    "module": "Administration",
+    "requirement": "Audit-Protokolle",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-010",
+    "module": "Administration",
+    "requirement": "Rollenpromotion per CLI",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-011",
+    "module": "Administration",
+    "requirement": "vollständiges Admin-Dashboard",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-012",
+    "module": "Administration",
+    "requirement": "Mitgliederverwaltung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-013",
+    "module": "Administration",
+    "requirement": "Rollenverwaltung im UI",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-014",
+    "module": "Administration",
+    "requirement": "feingranulare Berechtigungen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-015",
+    "module": "Administration",
+    "requirement": "Forumkategorienverwaltung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-016",
+    "module": "Administration",
+    "requirement": "Markt-/Event-/Clubverwaltung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-017",
+    "module": "Administration",
+    "requirement": "Achievement-/Gamificationverwaltung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-018",
+    "module": "Administration",
+    "requirement": "Systemstatistiken",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-019",
+    "module": "Administration",
+    "requirement": "Sicherheitsereignis-Ansicht",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-020",
+    "module": "Administration",
+    "requirement": "Feature-Flags",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-021",
+    "module": "Administration",
+    "requirement": "Systemeinstellungen",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "ADMIN-022",
+    "module": "Administration",
+    "requirement": "administrative Löschkonzepte",
+    "status": "Nicht implementiert",
+    "source": "src/lib/api.ts",
+    "evidence": "tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "DM-001",
+    "module": "Private Kommunikation",
+    "requirement": "optionale private Nachrichten",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "DM-002",
+    "module": "Private Kommunikation",
+    "requirement": "Einwilligung/Blockieren",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "DM-003",
+    "module": "Private Kommunikation",
+    "requirement": "Spam-/Missbrauchsmeldungen",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "DM-004",
+    "module": "Private Kommunikation",
+    "requirement": "Datenschutz-/Moderationsregeln",
+    "status": "Nicht implementiert",
+    "source": "prisma/schema.prisma",
+    "evidence": "Keine Implementierungstests"
+  },
+  {
+    "id": "DESIGN-001",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Onyx/Lime-Farbtokens",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-002",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Black-Chrome-Panels",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-003",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Purple-Akzente",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-004",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "responsive Typografie",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-005",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Buttons/Inputs/Textareas/Selects/Checkboxen",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-006",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "native Dialoge",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-007",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Karten",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-008",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Badges/Status",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-009",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Toasts",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-010",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Skeletons",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-011",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Avatare mit Initialen",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-012",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Fortschrittsanzeigen",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-013",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Such-/Filterelemente",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-014",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Pagination",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-015",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Bildergalerie",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-016",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "mobile Drawer-Navigation",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-017",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Hover/Mikrointeraktionen",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-018",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Reduced Motion",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-019",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Safe Areas",
+    "status": "Teilweise",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-020",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "vollständige semantische Token-Dokumentation",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-021",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Tooltips/Popovers",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-022",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Radio-Komponenten",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-023",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "konsistente Dropdowns/Tabs",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-024",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "komplexe Dashboard-Widgets",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-025",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Achievement-Karten",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-026",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "animierte Statistiken",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-027",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Seitenübergänge",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-028",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Scroll-Reveals",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-029",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "Cinematic Fahrzeugfotografie",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "DESIGN-030",
+    "module": "DriveOnyx Designsystem",
+    "requirement": "plattformweite visuelle Abnahme",
+    "status": "Nicht implementiert",
+    "source": "src/app/globals.css",
+    "evidence": "tests/e2e/community.spec.ts; tests/e2e/platform.spec.ts"
+  },
+  {
+    "id": "SECURITY-001",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Passwort-Hashing",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-002",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Session-Hashing",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-003",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "sichere Produktionscookies",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-004",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Same-Origin-Schreibschutz",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-005",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Rate Limiting",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-006",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "parametrisierte DB-Zugriffe",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-007",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "React-Text-Escaping",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-008",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Besitzprüfung",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-009",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Rollenprüfung",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-010",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "private Mediendaten",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-011",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Upload-Normalisierung",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-012",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Security Headers",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-013",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "strukturierte Fehler",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-014",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Datenminimierung",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-015",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Standort-Einwilligung/Widerruf",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-016",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Kontolöschung/Export",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-017",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Dependency-Audit",
+    "status": "Teilweise",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-018",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "unabhängige OWASP-Prüfung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-019",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "vollständige Missbrauchserkennung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-020",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "mehrstufiger Spam-Schutz",
+    "status": "Nicht implementiert",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-021",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Sicherheitsmonitoring",
+    "status": "Nicht implementiert",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-022",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "juristische Datenschutz-/Impressumsprüfung",
+    "status": "Nicht implementiert",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-023",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Aufbewahrungs-/Backup-Löschfristen im Betrieb",
+    "status": "Nicht implementiert",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-024",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "MFA",
+    "status": "Nicht implementiert",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "SECURITY-025",
+    "module": "Sicherheit und Datenschutz",
+    "requirement": "Penetrationstest",
+    "status": "Nicht implementiert",
+    "source": "src/lib/security.ts; src/lib/api.ts",
+    "evidence": "tests/unit.test.ts; tests/integration.test.ts; tests/community.test.ts"
+  },
+  {
+    "id": "OPS-001",
+    "module": "Betrieb und Sicherung",
+    "requirement": "vollständige Git-Historie",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-002",
+    "module": "Betrieb und Sicherung",
+    "requirement": "Quellenarchiv",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-003",
+    "module": "Betrieb und Sicherung",
+    "requirement": "Prüfsummen",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-004",
+    "module": "Betrieb und Sicherung",
+    "requirement": "Git-Mirror-Restore",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-005",
+    "module": "Betrieb und Sicherung",
+    "requirement": "additive Migrationen",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-006",
+    "module": "Betrieb und Sicherung",
+    "requirement": "wiederholte Migration",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-007",
+    "module": "Betrieb und Sicherung",
+    "requirement": "isolierter PostgreSQL-Kaltbackup-Restore einschließlich Medienbytes",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-008",
+    "module": "Betrieb und Sicherung",
+    "requirement": "Docker-/Deployment-Anleitung",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-009",
+    "module": "Betrieb und Sicherung",
+    "requirement": "Health-Endpunkt",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-010",
+    "module": "Betrieb und Sicherung",
+    "requirement": "CI-Konfiguration",
+    "status": "Teilweise",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-011",
+    "module": "Betrieb und Sicherung",
+    "requirement": "produktiver verschlüsselter Backup-Zeitplan",
+    "status": "Nicht implementiert",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-012",
+    "module": "Betrieb und Sicherung",
+    "requirement": "Offsite-Sicherung",
+    "status": "Nicht implementiert",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-013",
+    "module": "Betrieb und Sicherung",
+    "requirement": "pg_dump/pg_restore-Drill",
+    "status": "Nicht implementiert",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-014",
+    "module": "Betrieb und Sicherung",
+    "requirement": "Live-Backup/PITR",
+    "status": "Nicht implementiert",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-015",
+    "module": "Betrieb und Sicherung",
+    "requirement": "gemessene RPO/RTO",
+    "status": "Nicht implementiert",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-016",
+    "module": "Betrieb und Sicherung",
+    "requirement": "getesteter Release-Rollback",
+    "status": "Nicht implementiert",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-017",
+    "module": "Betrieb und Sicherung",
+    "requirement": "Monitoring/Alerting",
+    "status": "Nicht implementiert",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-018",
+    "module": "Betrieb und Sicherung",
+    "requirement": "Staging-Betrieb",
+    "status": "Nicht implementiert",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "OPS-019",
+    "module": "Betrieb und Sicherung",
+    "requirement": "HTTPS/SMTP/DNS-Abnahme",
+    "status": "Nicht implementiert",
+    "source": "scripts/export-project.py; scripts/test-cold-restore.mjs",
+    "evidence": "Export- und Restore-Protokolle"
+  },
+  {
+    "id": "QUALITY-001",
+    "module": "Tests und Plattformqualität",
+    "requirement": "TypeScript",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-002",
+    "module": "Tests und Plattformqualität",
+    "requirement": "ESLint",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-003",
+    "module": "Tests und Plattformqualität",
+    "requirement": "Produktions-Build",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-004",
+    "module": "Tests und Plattformqualität",
+    "requirement": "Unit-/Medientests",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-005",
+    "module": "Tests und Plattformqualität",
+    "requirement": "API-/Datenbanktests",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-006",
+    "module": "Tests und Plattformqualität",
+    "requirement": "Migrationserhalt",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-007",
+    "module": "Tests und Plattformqualität",
+    "requirement": "negative Berechtigungstests",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-008",
+    "module": "Tests und Plattformqualität",
+    "requirement": "Firefox-Teilabläufe",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-009",
+    "module": "Tests und Plattformqualität",
+    "requirement": "axe-Teilprüfungen",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-010",
+    "module": "Tests und Plattformqualität",
+    "requirement": "Responsive-Teilprüfungen",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-011",
+    "module": "Tests und Plattformqualität",
+    "requirement": "Quellschutzprüfung",
+    "status": "Teilweise",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-012",
+    "module": "Tests und Plattformqualität",
+    "requirement": "vollständige Cross-Browser-End-to-End-Abnahme",
+    "status": "Nicht implementiert",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-013",
+    "module": "Tests und Plattformqualität",
+    "requirement": "physische iOS-/Android-Geräte",
+    "status": "Nicht implementiert",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-014",
+    "module": "Tests und Plattformqualität",
+    "requirement": "vollständige WCAG 2.2 AA-Abnahme",
+    "status": "Nicht implementiert",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-015",
+    "module": "Tests und Plattformqualität",
+    "requirement": "Core Web Vitals",
+    "status": "Nicht implementiert",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-016",
+    "module": "Tests und Plattformqualität",
+    "requirement": "Lasttests",
+    "status": "Nicht implementiert",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-017",
+    "module": "Tests und Plattformqualität",
+    "requirement": "Query-/Index-Benchmarks",
+    "status": "Nicht implementiert",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-018",
+    "module": "Tests und Plattformqualität",
+    "requirement": "CDN-/Caching-Abnahme",
+    "status": "Nicht implementiert",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "QUALITY-019",
+    "module": "Tests und Plattformqualität",
+    "requirement": "gesamte kritische Nutzerreise",
+    "status": "Nicht implementiert",
+    "source": "tests; .github/workflows/quality.yml",
+    "evidence": "docs/TESTS.md"
+  },
+  {
+    "id": "SEO-001",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "grundlegende Metadaten",
+    "status": "Teilweise",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-002",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "semantische Grundstruktur",
+    "status": "Teilweise",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-003",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "Lazy Loading einiger Module",
+    "status": "Teilweise",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-004",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "absichtliche Indexierungssperre im Entwicklungsstand",
+    "status": "Teilweise",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-005",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "Open Graph je Inhalt",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-006",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "Canonicals",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-007",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "Sitemap",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-008",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "öffentliche Profil-Metadaten",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-009",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "strukturierte Daten",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-010",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "PWA-Manifest",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-011",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "App-Icons",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-012",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "Installierbarkeit",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-013",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "sicherer Offline-Fallback",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-014",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "next-intl",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "SEO-015",
+    "module": "SEO/PWA/Internationalisierung",
+    "requirement": "europäische Sprachversionen",
+    "status": "Nicht implementiert",
+    "source": "src/app/layout.tsx; next.config.ts",
+    "evidence": "Produktivprüfungen offen"
+  },
+  {
+    "id": "DOC-001",
+    "module": "Projektführung",
+    "requirement": "README",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-002",
+    "module": "Projektführung",
+    "requirement": "Architektur",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-003",
+    "module": "Projektführung",
+    "requirement": "Datenmodell",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-004",
+    "module": "Projektführung",
+    "requirement": "Setup",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-005",
+    "module": "Projektführung",
+    "requirement": "Deployment",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-006",
+    "module": "Projektführung",
+    "requirement": "Backup/Restore",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-007",
+    "module": "Projektführung",
+    "requirement": "Sicherheit",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-008",
+    "module": "Projektführung",
+    "requirement": "Designsystem",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-009",
+    "module": "Projektführung",
+    "requirement": "Testübersicht",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-010",
+    "module": "Projektführung",
+    "requirement": "Feature-Matrix",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-011",
+    "module": "Projektführung",
+    "requirement": "Changelog",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-012",
+    "module": "Projektführung",
+    "requirement": "offene Punkte",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-013",
+    "module": "Projektführung",
+    "requirement": "Entwicklungscheckpoints",
+    "status": "Teilweise",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-014",
+    "module": "Projektführung",
+    "requirement": "automatischer Dokumentationsabgleich pro Release",
+    "status": "Nicht implementiert",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "DOC-015",
+    "module": "Projektführung",
+    "requirement": "vollständige professionelle Übergabe nach 1.0-Abnahme",
+    "status": "Nicht implementiert",
+    "source": "docs",
+    "evidence": "Quellcode-/Dokumentationsabgleich"
+  },
+  {
+    "id": "BLOCK-001",
+    "module": "Externe Abnahmen",
+    "requirement": "Privates GitHub-Repository / Push / Branch-Schutz / ausgeführte Actions",
+    "status": "Technisch blockiert",
+    "source": "",
+    "evidence": "puma-map: authentifiziert 404; puma-map-: öffentlich, kein Upload."
+  },
+  {
+    "id": "BLOCK-002",
+    "module": "Externe Abnahmen",
+    "requirement": "Chromium / WebKit lokale Abnahme",
+    "status": "Technisch blockiert",
+    "source": "",
+    "evidence": "Browser-/Systemlaufzeit aktuell nicht zuverlässig verfügbar; konkrete Protokolle in TESTS.md."
+  },
+  {
+    "id": "BLOCK-003",
+    "module": "Externe Abnahmen",
+    "requirement": "Historischer VPS-Import",
+    "status": "Technisch blockiert",
+    "source": "",
+    "evidence": "Bereinigter Quellstand und autorisierter Zugang fehlen; keine Migration produktiver Daten."
+  },
+  {
+    "id": "BLOCK-004",
+    "module": "Externe Abnahmen",
+    "requirement": "Produktivveröffentlichung puma-map.de",
+    "status": "Technisch blockiert",
+    "source": "",
+    "evidence": "Freigabe, Hosting/SMTP/DNS, Rechtsprüfung und vollständige Sicherheits-/Qualitätsabnahme fehlen."
+  }
+]

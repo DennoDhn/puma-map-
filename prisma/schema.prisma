@@ -1,0 +1,349 @@
+generator client {
+  provider = "prisma-client"
+  output = "../src/generated/prisma"
+}
+datasource db {
+  provider = "postgresql"
+}
+enum Role {
+  MEMBER
+  MODERATOR
+  ADMIN
+}
+enum Visibility {
+  PRIVATE
+  PUBLIC
+}
+enum ContentKind {
+  POST
+  TOPIC
+  LISTING
+  EVENT
+  WIKI
+  BUILD
+}
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  RESERVED
+  SOLD
+  HIDDEN
+}
+model User {
+  id String @id @default(cuid())
+  email String @unique
+  username String @unique
+  passwordHash String
+  verifiedAt DateTime?
+  role Role @default(MEMBER)
+  bio String @default("")
+  regionId String?
+  region Region? @relation(fields:[regionId], references:[id])
+  shareRegion Boolean @default(false)
+  consentAt DateTime?
+  createdAt DateTime @default(now())
+  notifyComments Boolean @default(true)
+  notifyReplies Boolean @default(true)
+  notifySubscriptions Boolean @default(true)
+  notifyReactions Boolean @default(false)
+  subscriptions Subscription[]
+  sessions Session[]
+  tokens AuthToken[]
+  vehicles Vehicle[]
+  contents Content[]
+  comments Comment[]
+  reactions Reaction[]
+  attendance Attendance[]
+  reports Report[]
+  notifications Notification[]
+  @@index([shareRegion, regionId])
+}
+model Region {
+  id String @id
+  name String @unique
+  latitude Float
+  longitude Float
+  users User[]
+}
+model Session {
+  tokenHash String @id
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  expiresAt DateTime
+  @@index([userId])
+  @@index([expiresAt])
+}
+model AuthToken {
+  tokenHash String @id
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  purpose String
+  expiresAt DateTime
+  @@index([userId, purpose])
+}
+model Vehicle {
+  id String @id @default(cuid())
+  ownerId String
+  owner User @relation(fields:[ownerId],references:[id],onDelete:Cascade)
+  name String
+  variant String
+  year Int
+  powerKw Int?
+  mileage Int?
+  color String
+  description String @default("")
+  visibility Visibility @default(PRIVATE)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  media VehicleMedia[]
+  parts VehiclePart[]
+  milestones VehicleMilestone[]
+  changes VehicleChange[]
+  entries VehicleEntry[]
+  @@index([ownerId, createdAt])
+  @@index([visibility, createdAt])
+}
+model VehicleEntry {
+  revision Int @default(1)
+  keepVersions Boolean @default(false)
+  versions VehicleEntryVersion[]
+  media VehicleMedia[]
+  parts VehiclePart[]
+  milestones VehicleMilestone[]
+  communityBuild Content?
+  category String @default("OTHER")
+  progress Int @default(0)
+  id String @id @default(cuid())
+  vehicleId String
+  vehicle Vehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+  kind String
+  title String
+  body String
+  occurredOn DateTime @db.Date
+  mileage Int?
+  costCents Int?
+  visibility Visibility @default(PRIVATE)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([vehicleId, occurredOn, id])
+}
+model Content {
+  locked Boolean @default(false)
+  pinned Boolean @default(false)
+  subscriptions Subscription[]
+  notifications Notification[]
+  vehicleEntryId String? @unique
+  vehicleEntry VehicleEntry? @relation(fields: [vehicleEntryId], references: [id], onDelete: Cascade)
+  id String @id @default(cuid())
+  authorId String
+  author User @relation(fields:[authorId],references:[id],onDelete:Cascade)
+  kind ContentKind
+  title String
+  body String
+  category String
+  status ContentStatus @default(PUBLISHED)
+  priceCents Int?
+  region String?
+  startsAt DateTime?
+  location String?
+  sourceUrl String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  comments Comment[]
+  reactions Reaction[]
+  attendance Attendance[]
+  reports Report[]
+  revisions Revision[]
+  @@index([kind, status, createdAt])
+  @@index([kind, status, pinned, createdAt, id], map:"Content_forum_order_idx")
+  @@index([authorId])
+}
+model Comment {
+  parentId String?
+  parent Comment? @relation("Replies", fields:[parentId], references:[id], onDelete:SetNull)
+  replies Comment[] @relation("Replies")
+  removed Boolean @default(false)
+  updatedAt DateTime @default(now()) @updatedAt
+  id String @id @default(cuid())
+  contentId String
+  content Content @relation(fields:[contentId],references:[id],onDelete:Cascade)
+  authorId String
+  author User @relation(fields:[authorId],references:[id],onDelete:Cascade)
+  body String
+  createdAt DateTime @default(now())
+  @@index([contentId, createdAt])
+  @@index([parentId])
+}
+model Reaction {
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  contentId String
+  content Content @relation(fields:[contentId],references:[id],onDelete:Cascade)
+  type String
+  @@id([userId, contentId, type])
+}
+model Attendance {
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  contentId String
+  content Content @relation(fields:[contentId],references:[id],onDelete:Cascade)
+  @@id([userId, contentId])
+}
+model Revision {
+  id String @id @default(cuid())
+  contentId String
+  content Content @relation(fields:[contentId],references:[id],onDelete:Cascade)
+  title String
+  body String
+  sourceUrl String?
+  createdAt DateTime @default(now())
+  @@index([contentId, createdAt])
+}
+model Report {
+  id String @id @default(cuid())
+  reporterId String
+  reporter User @relation(fields:[reporterId],references:[id],onDelete:Cascade)
+  contentId String
+  content Content @relation(fields:[contentId],references:[id],onDelete:Cascade)
+  reason String
+  resolved Boolean @default(false)
+  createdAt DateTime @default(now())
+  @@index([resolved, createdAt])
+}
+model Notification {
+  contentId String?
+  content Content? @relation(fields:[contentId],references:[id],onDelete:Cascade)
+  eventKey String? @unique
+  kind String @default("SYSTEM")
+  id String @id @default(cuid())
+  userId String
+  user User @relation(fields:[userId],references:[id],onDelete:Cascade)
+  text String
+  read Boolean @default(false)
+  createdAt DateTime @default(now())
+  @@index([userId, read, createdAt])
+  @@index([contentId])
+}
+model Audit {
+  id String @id @default(cuid())
+  actorId String
+  action String
+  targetId String
+  createdAt DateTime @default(now())
+  @@index([createdAt])
+}
+model RateBucket {
+  key String @id
+  count Int @default(1)
+  expiresAt DateTime
+  @@index([expiresAt])
+}
+
+model VehicleMedia {
+  partId String?
+  part VehiclePart? @relation(fields:[partId],references:[id],onDelete:SetNull)
+  milestoneId String?
+  milestone VehicleMilestone? @relation(fields:[milestoneId],references:[id],onDelete:SetNull)
+  id String @id @default(cuid())
+  vehicleId String
+  vehicle Vehicle @relation(fields:[vehicleId], references:[id], onDelete:Cascade)
+  entryId String?
+  entry VehicleEntry? @relation(fields:[entryId], references:[id], onDelete:Cascade)
+  caption String @default("")
+  visibility Visibility @default(PRIVATE)
+  position Int @default(0)
+  cover Boolean @default(false)
+  width Int
+  height Int
+  image Bytes
+  thumbnail Bytes
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([entryId])
+  @@index([partId])
+  @@index([milestoneId])
+  @@index([vehicleId, position, id])
+}
+model VehiclePart {
+  media VehicleMedia[]
+  id String @id @default(cuid())
+  vehicleId String
+  vehicle Vehicle @relation(fields:[vehicleId],references:[id],onDelete:Cascade)
+  entryId String?
+  entry VehicleEntry? @relation(fields:[entryId],references:[id],onDelete:SetNull)
+  name String
+  category String
+  manufacturer String @default("")
+  partNumber String @default("")
+  condition String @default("UNKNOWN")
+  status String @default("PLANNED")
+  installedOn DateTime? @db.Date
+  mileage Int?
+  source String @default("")
+  priceCents Int?
+  notes String @default("")
+  visibility Visibility @default(PRIVATE)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  milestones VehicleMilestone[]
+  @@index([entryId])
+  @@index([vehicleId, createdAt, id])
+}
+model VehicleMilestone {
+  media VehicleMedia[]
+  id String @id @default(cuid())
+  vehicleId String
+  vehicle Vehicle @relation(fields:[vehicleId],references:[id],onDelete:Cascade)
+  entryId String?
+  entry VehicleEntry? @relation(fields:[entryId],references:[id],onDelete:SetNull)
+  partId String?
+  part VehiclePart? @relation(fields:[partId],references:[id],onDelete:SetNull)
+  title String
+  description String @default("")
+  category String
+  status String @default("PLANNED")
+  targetOn DateTime? @db.Date
+  completedOn DateTime? @db.Date
+  progress Int @default(0)
+  visibility Visibility @default(PRIVATE)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  @@index([entryId])
+  @@index([partId])
+  @@index([vehicleId, createdAt, id])
+}
+model VehicleChange {
+  id String @id @default(cuid())
+  vehicleId String
+  vehicle Vehicle @relation(fields:[vehicleId],references:[id],onDelete:Cascade)
+  actorId String
+  entityId String
+  entityType String
+  action String
+  fields String[]
+  createdAt DateTime @default(now())
+  @@index([vehicleId, createdAt, id])
+}
+
+model VehicleEntryVersion {
+  id String @id @default(cuid())
+  entryId String
+  entry VehicleEntry @relation(fields:[entryId],references:[id],onDelete:Cascade)
+  revision Int
+  actorId String
+  snapshot Json
+  createdAt DateTime @default(now())
+  expiresAt DateTime
+  @@unique([entryId, revision])
+  @@index([expiresAt])
+}
+
+model Subscription {
+  userId String
+  user User @relation(fields:[userId], references:[id], onDelete:Cascade)
+  contentId String
+  content Content @relation(fields:[contentId], references:[id], onDelete:Cascade)
+  createdAt DateTime @default(now())
+  @@id([userId,contentId])
+  @@index([contentId])
+}
