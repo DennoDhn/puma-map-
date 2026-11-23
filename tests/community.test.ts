@@ -23,7 +23,7 @@ test('community integration with isolated synthetic accounts', async (t) => {
     const token = newToken();
     const user = await db.user.create({
       data: {
-        username: `c_${token.slice(0, 12)}`,
+        username: `c_${digest(token).slice(0, 12)}`,
         email: `${token}@example.test`,
         passwordHash: 'unusable-fixture',
         verifiedAt: new Date(),
@@ -45,6 +45,82 @@ test('community integration with isolated synthetic accounts', async (t) => {
   const topic = (await call('contents', 'POST', payload, alice.cookie)).data;
   const base = `contents/${topic.id}`;
   try {
+    await t.test(
+      'comment reports keep the parent public and require moderator review',
+      async () => {
+        const reportTopic = (await call('contents', 'POST', payload, alice.cookie)).data;
+        const reportBase = 'contents/' + reportTopic.id;
+        const comment = (
+          await call(reportBase + '/comments', 'POST', { body: 'Testkommentar' }, alice.cookie)
+        ).data;
+        const reportInput = { commentId: comment.id, reason: 'Bitte diesen Kommentar prüfen.' };
+        assert.equal((await call(reportBase + '/report', 'POST', reportInput)).status, 401);
+        assert.equal(
+          (
+            await call(
+              reportBase + '/report',
+              'POST',
+              { ...reportInput, commentId: 'missing' },
+              bob.cookie,
+            )
+          ).status,
+          404,
+        );
+        for (const attempt of [1, 2])
+          assert.equal(
+            (await call(reportBase + '/report', 'POST', reportInput, bob.cookie)).status,
+            200,
+            String(attempt),
+          );
+        const reports = (await call('admin', 'GET', undefined, mod.cookie)).data.reports.filter(
+          (row: { commentId: string }) => row.commentId === comment.id,
+        );
+        assert.equal(reports.length, 1);
+        assert.equal(reports[0].comment.body, 'Testkommentar');
+        const review = { reportId: reports[0].id, remove: true };
+        assert.equal((await call('admin/comment-review', 'POST', review, bob.cookie)).status, 403);
+        assert.equal((await call('admin/comment-review', 'POST', review, mod.cookie)).status, 200);
+        assert.equal(
+          (await db.comment.findUniqueOrThrow({ where: { id: comment.id } })).removed,
+          true,
+        );
+        assert.equal(
+          (await db.content.findUniqueOrThrow({ where: { id: reportTopic.id } })).status,
+          'PUBLISHED',
+        );
+        assert.equal(
+          (await db.report.findUniqueOrThrow({ where: { id: reports[0].id } })).resolved,
+          true,
+        );
+      },
+    );
+    await t.test(
+      'mentions notify once per new post, respect settings and skip email addresses',
+      async () => {
+        const message = {
+          ...payload,
+          kind: 'POST',
+          body: `@${mod.username} @${mod.username.toUpperCase()} test@${bob.username}.de @${alice.username}`,
+        };
+        const post = (await call('contents', 'POST', message, alice.cookie)).data;
+        const notices = await db.notification.findMany({ where: { contentId: post.id } });
+        assert.equal(notices.length, 1);
+        assert.equal(notices[0].kind, 'MENTION');
+        assert.equal(notices[0].userId, mod.id);
+        await db.user.update({ where: { id: mod.id }, data: { notifyMentions: false } });
+        await call(
+          'contents/' + post.id + '/comments',
+          'POST',
+          { body: '@' + mod.username },
+          bob.cookie,
+        );
+        assert.equal(
+          await db.notification.count({ where: { contentId: post.id, userId: mod.id } }),
+          1,
+        );
+        await db.content.delete({ where: { id: post.id } });
+      },
+    );
     await t.test(
       'owners can page through more than fifty notifications and bookmarks',
       async () => {
@@ -193,6 +269,7 @@ test('community integration with isolated synthetic accounts', async (t) => {
           notifyReplies: false,
           notifySubscriptions: false,
           notifyReactions: true,
+          notifyMentions: false,
         };
         assert.equal(
           (await call('notification-preferences', 'PATCH', prefs, alice.cookie)).status,

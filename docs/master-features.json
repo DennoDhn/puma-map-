@@ -1363,7 +1363,7 @@
     "id": "FEED-018",
     "module": "Community Feed",
     "requirement": "Erwähnungen",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/components/platform.tsx",
     "evidence": "tests/integration.test.ts; tests/community.test.ts"
   },
@@ -1555,8 +1555,8 @@
     "id": "FORUM-021",
     "module": "Forum",
     "requirement": "einzelne Kommentarmeldungen",
-    "status": "Nicht implementiert",
-    "source": "src/lib/community.ts",
+    "status": "Teilweise",
+    "source": "src/lib/api.ts, src/components/community-discussion.tsx, src/components/platform.tsx",
     "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
   },
   {
@@ -2499,7 +2499,7 @@
     "id": "NOTICE-013",
     "module": "Benachrichtigungen",
     "requirement": "Erwähnungen",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/components/notification-center.tsx",
     "evidence": "tests/community.test.ts; tests/e2e/community.spec.ts"
   },

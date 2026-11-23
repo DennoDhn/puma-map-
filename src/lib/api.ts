@@ -1,4 +1,11 @@
-import { discussion, notify, preferences, preferenceFields, publicCommunity } from './community';
+import {
+  discussion,
+  mentionedMembers,
+  notify,
+  preferences,
+  preferenceFields,
+  publicCommunity,
+} from './community';
 import { journalHistory, rememberEntry, assertRevision } from './journal-history';
 import { workspace, mediaMetadata, recordChange } from './vehicle-workspace';
 import { NextResponse } from 'next/server';
@@ -418,6 +425,7 @@ export async function handle(request: Request, path: string[]) {
           notifyReplies: user.notifyReplies,
           notifySubscriptions: user.notifySubscriptions,
           notifyReactions: user.notifyReactions,
+          notifyMentions: user.notifyMentions,
         },
         subscriptions,
         reports,
@@ -876,13 +884,26 @@ export async function handle(request: Request, path: string[]) {
         await rate(`content:${user.id}`, 20);
         const data = content.parse(await body(request));
         return reply(
-          await db.content.create({
-            data: {
-              ...data,
-              startsAt: data.startsAt ? new Date(data.startsAt) : null,
-              authorId: user.id,
-              status: data.kind === 'WIKI' ? 'DRAFT' : 'PUBLISHED',
-            },
+          await db.$transaction(async (tx) => {
+            const created = await tx.content.create({
+              data: {
+                ...data,
+                startsAt: data.startsAt ? new Date(data.startsAt) : null,
+                authorId: user.id,
+                status: data.kind === 'WIKI' ? 'DRAFT' : 'PUBLISHED',
+              },
+            });
+            if (data.kind === 'POST' || data.kind === 'TOPIC') {
+              for (const member of await mentionedMembers(tx, created.body, user.id))
+                await notify(
+                  tx,
+                  member.id,
+                  created.id,
+                  'MENTION',
+                  `mention:${created.id}:${member.id}`,
+                );
+            }
+            return created;
           }),
           201,
         );
@@ -1033,11 +1054,28 @@ export async function handle(request: Request, path: string[]) {
         return reply({ ok: true });
       }
       if (method === 'POST' && path[2] === 'report') {
-        const { reason } = z
-          .object({ reason: z.string().trim().min(10).max(1000) })
+        const { reason, commentId } = z
+          .object({
+            reason: z.string().trim().min(10).max(1000),
+            commentId: z.string().min(1).max(100).optional(),
+          })
           .strict()
           .parse(await body(request));
         await rate(`report:${user.id}`, 5);
+        if (commentId) {
+          await db.$transaction(async (tx) => {
+            const target = await tx.$queryRaw<
+              { id: string }[]
+            >`SELECT id FROM "Comment" WHERE id=${commentId} AND "contentId"=${item.id} AND NOT removed FOR UPDATE`;
+            if (!target.length) throw new HttpError(404, 'Kommentar nicht gefunden.');
+            await tx.report.upsert({
+              where: { reporterId_commentId: { reporterId: user.id, commentId } },
+              create: { reporterId: user.id, contentId: item.id, commentId, reason },
+              update: {},
+            });
+          });
+          return reply({ ok: true });
+        }
         return reply(
           await db.report.create({ data: { contentId: item.id, reporterId: user.id, reason } }),
           201,
@@ -1116,8 +1154,11 @@ export async function handle(request: Request, path: string[]) {
       if (method === 'GET' && route === 'admin') {
         const [reports, drafts, audit] = await Promise.all([
           db.report.findMany({
-            where: { resolved: false },
-            include: { content: { select: { id: true, title: true } } },
+            where: { resolved: false, content: { OR: publicCommunity.OR } },
+            include: {
+              comment: { select: { body: true, removed: true } },
+              content: { select: { id: true, title: true } },
+            },
             take: 100,
           }),
           db.content.findMany({
@@ -1128,6 +1169,40 @@ export async function handle(request: Request, path: string[]) {
           db.audit.findMany({ orderBy: { createdAt: 'desc' }, take: 100 }),
         ]);
         return reply({ reports, drafts, audit });
+      }
+      if (method === 'POST' && route === 'admin/comment-review') {
+        const data = z
+          .object({ reportId: z.string().min(1).max(100), remove: z.boolean() })
+          .strict()
+          .parse(await body(request));
+        await db.$transaction(async (tx) => {
+          const report = await tx.report.findUnique({ where: { id: data.reportId } });
+          if (!report?.commentId) throw new HttpError(404, 'Kommentarmeldung nicht gefunden.');
+          await tx.$queryRaw`SELECT id FROM "Comment" WHERE id=${report.commentId} FOR UPDATE`;
+          const changed = await tx.report.updateMany({
+            where: { id: report.id, resolved: false },
+            data: { resolved: true },
+          });
+          if (!changed.count) return;
+          if (data.remove) {
+            await tx.comment.update({
+              where: { id: report.commentId },
+              data: { body: '', removed: true },
+            });
+            await tx.report.updateMany({
+              where: { commentId: report.commentId, resolved: false },
+              data: { resolved: true },
+            });
+          }
+          await tx.audit.create({
+            data: {
+              actorId: user.id,
+              action: data.remove ? 'COMMENT_REMOVE' : 'COMMENT_REPORT_DISMISS',
+              targetId: report.commentId,
+            },
+          });
+        });
+        return reply({ ok: true });
       }
       if (method === 'POST' && route === 'admin/moderate') {
         const data = z

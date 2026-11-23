@@ -1033,19 +1033,46 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
                           {r.content.title}
                           <ArrowUpRight size={16} />
                         </button>
+                        {r.comment && (
+                          <blockquote>{r.comment.body || 'Kommentar wurde entfernt.'}</blockquote>
+                        )}
                         <p>{r.reason}</p>
-                        <ModerateForm
-                          id={r.content.id}
-                          action="HIDE"
-                          busy={busy}
-                          submit={(data) =>
-                            void run(async () => {
-                              await api('admin/moderate', 'POST', data);
-                              refresh();
-                              setToast('Maßnahme gespeichert und protokolliert.');
-                            })
-                          }
-                        />
+                        {r.comment ? (
+                          <div className="button-row">
+                            {[false, true].map((remove) => (
+                              <button
+                                key={String(remove)}
+                                className="button secondary"
+                                disabled={busy}
+                                onClick={() =>
+                                  void run(async () => {
+                                    await api('admin/comment-review', 'POST', {
+                                      reportId: r.id,
+                                      remove,
+                                    });
+                                    refresh();
+                                    setToast('Meldung bearbeitet.');
+                                  })
+                                }
+                              >
+                                {remove ? 'Kommentar entfernen' : 'Meldung schließen'}
+                              </button>
+                            ))}
+                          </div>
+                        ) : (
+                          <ModerateForm
+                            id={r.content.id}
+                            action="HIDE"
+                            busy={busy}
+                            submit={(data) =>
+                              void run(async () => {
+                                await api('admin/moderate', 'POST', data);
+                                refresh();
+                                setToast('Maßnahme gespeichert und protokolliert.');
+                              })
+                            }
+                          />
+                        )}
                       </div>
                     ))
                   ) : (

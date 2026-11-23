@@ -256,7 +256,7 @@ Quellbeleg: `src/components/platform.tsx`. Prüfbeleg/-grenze: `tests/integratio
 | FEED-015 | weitere Reaktionstypen | Nicht implementiert |
 | FEED-016 | Teilen-Dialog/Web Share | Nicht implementiert |
 | FEED-017 | Hashtags | Nicht implementiert |
-| FEED-018 | Erwähnungen | Nicht implementiert |
+| FEED-018 | Erwähnungen | Teilweise – neue Beiträge, Themen und Kommentare; Geräteabnahme offen |
 | FEED-019 | allgemeine Profil-/Fahrzeug-/Build-Linkpicker | Nicht implementiert |
 | FEED-020 | Feed-Sortierauswahl | Nicht implementiert |
 | FEED-021 | optimistische Konfliktkontrolle für Social-Edits | Nicht implementiert |
@@ -289,7 +289,7 @@ Quellbeleg: `src/lib/community.ts`. Prüfbeleg/-grenze: `tests/community.test.ts
 | FORUM-018 | Anhänge | Nicht implementiert |
 | FORUM-019 | eigene Themenansicht außerhalb Modal | Nicht implementiert |
 | FORUM-020 | interne Vorschaukarten für Profile/Fahrzeuge/Builds/Wiki/Teile/Angebote/Events | Nicht implementiert |
-| FORUM-021 | einzelne Kommentarmeldungen | Nicht implementiert |
+| FORUM-021 | einzelne Kommentarmeldungen | Teilweise – Meldung und Moderation integriert; Geräteabnahme offen |
 | FORUM-022 | Moderationsbegründung für Kommentarentfernung | Nicht implementiert |
 | FORUM-023 | Abonnements über 500 mit Queue | Nicht implementiert |
 
@@ -479,7 +479,7 @@ Quellbeleg: `src/components/notification-center.tsx`. Prüfbeleg/-grenze: `tests
 | NOTICE-010 | Deduplizierung | Teilweise |
 | NOTICE-011 | Sichtbarkeitsprüfung beim Lesen | Teilweise |
 | NOTICE-012 | Benachrichtigungspagination jenseits der letzten 50 | Teilweise |
-| NOTICE-013 | Erwähnungen | Nicht implementiert |
+| NOTICE-013 | Erwähnungen | Teilweise – neue Beiträge, Themen und Kommentare; Geräteabnahme offen |
 | NOTICE-014 | Follower | Nicht implementiert |
 | NOTICE-015 | Marktanfragen | Nicht implementiert |
 | NOTICE-016 | Eventeinladungen | Nicht implementiert |

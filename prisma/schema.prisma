@@ -45,6 +45,7 @@ model User {
   notifyComments Boolean @default(true)
   notifyReplies Boolean @default(true)
   notifySubscriptions Boolean @default(true)
+  notifyMentions Boolean @default(true)
   notifyReactions Boolean @default(false)
   subscriptions Subscription[]
   sessions Session[]
@@ -159,6 +160,7 @@ model Content {
   @@index([authorId])
 }
 model Comment {
+  reports Report[]
   parentId String?
   parent Comment? @relation("Replies", fields:[parentId], references:[id], onDelete:SetNull)
   replies Comment[] @relation("Replies")
@@ -200,6 +202,9 @@ model Revision {
   @@index([contentId, createdAt])
 }
 model Report {
+  commentId String?
+  comment Comment? @relation(fields:[commentId],references:[id],onDelete:Cascade)
+  @@unique([reporterId, commentId])
   id String @id @default(cuid())
   reporterId String
   reporter User @relation(fields:[reporterId],references:[id],onDelete:Cascade)

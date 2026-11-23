@@ -14,11 +14,13 @@ type Preferences = {
   notifyReplies: boolean;
   notifySubscriptions: boolean;
   notifyReactions: boolean;
+  notifyMentions: boolean;
 };
 const labels: Record<keyof Preferences, string> = {
   notifyComments: 'Kommentare zu meinen Inhalten',
   notifyReplies: 'Antworten auf meine Kommentare',
   notifySubscriptions: 'Abonnierte Forenthemen',
+  notifyMentions: 'Erwähnungen mit @Benutzername',
   notifyReactions: 'Reaktionen auf meine Inhalte',
 };
 export function NotificationCenter({ openContent }: { openContent: (id: string) => void }) {
@@ -102,13 +104,15 @@ export function NotificationCenter({ openContent }: { openContent: (id: string) 
           <article className={`notice-card ${n.read ? '' : 'unread'}`} key={n.id}>
             <div>
               <span className="tag">
-                {n.kind === 'SYSTEM'
-                  ? 'Mitteilung'
-                  : n.kind === 'REACTION'
-                    ? 'Reaktion'
-                    : n.kind === 'REPLY'
-                      ? 'Antwort'
-                      : 'Diskussion'}
+                {n.kind === 'MENTION'
+                  ? 'Erwähnung'
+                  : n.kind === 'SYSTEM'
+                    ? 'Mitteilung'
+                    : n.kind === 'REACTION'
+                      ? 'Reaktion'
+                      : n.kind === 'REPLY'
+                        ? 'Antwort'
+                        : 'Diskussion'}
               </span>
               <p>{n.text}</p>
               <time dateTime={n.createdAt}>{date(n.createdAt)}</time>

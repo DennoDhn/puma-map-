@@ -54,7 +54,12 @@ export type Item = {
 };
 export type Notice = { id: string; text: string; read: boolean; createdAt: string };
 export type Admin = {
-  reports: { id: string; reason: string; content: { id: string; title: string } }[];
+  reports: {
+    comment: { body: string; removed: boolean } | null;
+    id: string;
+    reason: string;
+    content: { id: string; title: string };
+  }[];
   drafts: Item[];
   audit: { id: string; action: string; createdAt: string }[];
 };

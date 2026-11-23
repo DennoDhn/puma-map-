@@ -31,6 +31,8 @@ export function CommunityDiscussion({
     [busy, setBusy] = useState(false),
     [reply, setReply] = useState<Comment | null>(null),
     [edit, setEdit] = useState<Comment | null>(null),
+    [report, setReport] = useState<string | null>(null),
+    [feedback, setFeedback] = useState(''),
     [remove, setRemove] = useState<string | null>(null),
     [draft, setDraft] = useState('');
   useEffect(() => {
@@ -120,6 +122,7 @@ export function CommunityDiscussion({
           )}
         </div>
       )}
+      {feedback && <p role="status">{feedback}</p>}
       {error && (
         <p role="alert" className="dossier-alert">
           {error}
@@ -183,12 +186,47 @@ export function CommunityDiscussion({
                       Kommentar bearbeiten
                     </button>
                   )}
+                  {c.authorId !== me.id && (
+                    <button
+                      className="text-button"
+                      onClick={() => {
+                        setReport(c.id);
+                        setFeedback('');
+                      }}
+                    >
+                      Kommentar melden
+                    </button>
+                  )}
                   {(c.authorId === me.id || mod) && (
                     <button className="text-button" onClick={() => setRemove(c.id)}>
                       Kommentar entfernen
                     </button>
                   )}
                 </div>
+              )}
+              {report === c.id && (
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    const reason = String(new FormData(e.currentTarget).get('reason'));
+                    void run(async () => {
+                      await api(`contents/${item.id}/report`, 'POST', { commentId: c.id, reason });
+                      setReport(null);
+                      setFeedback('Die Moderation hat deine Meldung erhalten.');
+                    });
+                  }}
+                >
+                  <label className="field">
+                    Grund der Meldung
+                    <textarea name="reason" required minLength={10} maxLength={1000} />
+                  </label>
+                  <button className="button" disabled={busy}>
+                    Meldung senden
+                  </button>
+                  <button type="button" className="text-button" onClick={() => setReport(null)}>
+                    Abbrechen
+                  </button>
+                </form>
               )}
               {remove === c.id && (
                 <div className="recovery-confirm">
@@ -272,6 +310,7 @@ export function CommunityDiscussion({
             <label htmlFor={composerId}>Dein Kommentar</label>
             <textarea
               id={composerId}
+              placeholder="Mit @Benutzername jemanden erwähnen"
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
               required

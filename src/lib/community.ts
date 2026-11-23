@@ -16,6 +16,7 @@ export const preferences = z
     notifyReplies: z.boolean(),
     notifySubscriptions: z.boolean(),
     notifyReactions: z.boolean(),
+    notifyMentions: z.boolean().optional(),
   })
   .strict();
 export const preferenceFields = {
@@ -23,6 +24,7 @@ export const preferenceFields = {
   notifyReplies: true,
   notifySubscriptions: true,
   notifyReactions: true,
+  notifyMentions: true,
 } as const;
 export const commentInput = z
   .object({
@@ -31,6 +33,30 @@ export const commentInput = z
   })
   .strict();
 export const publicAuthor = { id: true, username: true } as const;
+export async function mentionedMembers(
+  tx: Prisma.TransactionClient,
+  body: string,
+  authorId: string,
+) {
+  const names = [
+    ...new Set(
+      Array.from(
+        body.matchAll(/(?:^|[^\p{L}\p{N}_@.+-])@([a-z0-9_]{3,24})(?![\p{L}\p{N}_])/giu),
+        (match) => match[1].toLowerCase(),
+      ),
+    ),
+  ].slice(0, 10);
+  if (!names.length) return [];
+  return tx.user.findMany({
+    where: {
+      username: { in: names },
+      id: { not: authorId },
+      verifiedAt: { not: null },
+      notifyMentions: true,
+    },
+    select: { id: true },
+  });
+}
 export async function notify(
   tx: Prisma.TransactionClient,
   userId: string,
@@ -47,11 +73,13 @@ export async function notify(
       kind,
       eventKey,
       text:
-        kind === 'REACTION'
-          ? 'Neue Reaktion auf deinen Beitrag.'
-          : kind === 'REPLY'
-            ? 'Neue Antwort auf deinen Kommentar.'
-            : 'Neuer Diskussionsbeitrag.',
+        kind === 'MENTION'
+          ? 'Du wurdest in der Community erwähnt.'
+          : kind === 'REACTION'
+            ? 'Neue Reaktion auf deinen Beitrag.'
+            : kind === 'REPLY'
+              ? 'Neue Antwort auf deinen Kommentar.'
+              : 'Neuer Diskussionsbeitrag.',
     },
     update: {},
   });
@@ -131,6 +159,8 @@ export async function discussion(
           take: 500,
         }))
           if (!recipients.has(sub.userId)) recipients.set(sub.userId, 'SUBSCRIPTION');
+      for (const member of await mentionedMembers(tx, data.body, user.id))
+        recipients.set(member.id, 'MENTION');
       recipients.delete(user.id);
       for (const [id, kind] of recipients)
         await notify(tx, id, contentId, kind, `comment:${created.id}:${id}`);
@@ -151,6 +181,10 @@ export async function discussion(
         await tx.comment.update({ where: { id: targetId }, data });
       } else {
         await tx.comment.update({ where: { id: targetId }, data: { body: '', removed: true } });
+        await tx.report.updateMany({
+          where: { commentId: targetId, resolved: false },
+          data: { resolved: true },
+        });
         if (current.authorId !== user.id)
           await tx.audit.create({ data: { actorId: user.id, action: 'COMMENT_REMOVE', targetId } });
       }

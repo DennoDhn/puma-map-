@@ -7,6 +7,10 @@ published to puma-map.de.** The historic VPS code was inaccessible. No productio
 
 See [0.6 handoff](docs/HANDOFF_06.md), [master completion matrix](docs/MASTER_FEATURE_MATRIX.md) and [release plan to 1.0](docs/ROADMAP_1_0.md). Versions do not represent completion percentages.
 
+## Designvorschau
+
+[Interaktive GitHub-Pages-Vorschau](https://dennodhn.github.io/puma-map-/). Die Vorschau verwendet die öffentlichen Ansichten der Anwendung mit leeren Beispieldaten. Es werden keine Konten oder Beiträge angelegt. Nach UI-Änderungen aktualisiert `npm run build:preview` die ausgelieferte `index.html`.
+
 ## Implemented now
 
 - PostgreSQL-backed accounts: register, verify email, sign in/out, reset password, revoke sessions.
