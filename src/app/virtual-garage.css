@@ -53,3 +53,27 @@
 @media(max-width:1150px) { .vg-grid { grid-template-columns:1fr; }.vg-stage { min-height:0; }.vg-stage svg { max-height:480px; } }
 @media(max-width:600px) { .vg-head { align-items:flex-start;flex-direction:column; }.vg-brand { text-align:left; }.vg-controls,.vg-drafts { padding:17px;border-radius:15px; }.vg-stage { border-radius:16px; }.vg-stage-top,.vg-stage-bottom { padding:15px;font-size:8px; }.vg-stage svg { margin:14px 0 20px; }.vg-actions { flex-direction:column; }.vg-drafts>p { align-items:flex-start; } }
 @media(prefers-reduced-motion:reduce){ .vg * { scroll-behavior:auto!important; } }
+
+/* Entry point in the existing owner's/community garage */
+.vg-garage-cta {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:20px;
+  margin:0 0 24px;
+  padding:24px 28px;
+  border-radius:20px;
+  border:1px solid #8b5cf673;
+  background:
+    radial-gradient(ellipse at 84% 24%,#ff2daa26,transparent 52%),
+    linear-gradient(117deg,#1b2330,#10131e 64%,#171025);
+  box-shadow:0 15px 45px #0005,inset 0 1px 0 #ffffff1b;
+}
+.vg-garage-cta h2 {margin:0 0 7px;font-size:clamp(20px,2.1vw,29px);}
+.vg-garage-cta p {margin:0;color:#cad4e2;font-size:13px;}
+.vg-garage-cta .button {white-space:nowrap;}
+@media(max-width:600px){
+  .vg-garage-cta {padding:19px;align-items:stretch;}
+  .vg-garage-cta .button {width:100%;}
+}
