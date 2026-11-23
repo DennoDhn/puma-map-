@@ -193,6 +193,34 @@ export async function handle(request: Request, path: string[]) {
       const user = await currentUser(request);
       return reply(user ? ownProfile(user) : null);
     }
+    if (method === 'GET' && route === 'home-highlights') {
+      const [events, listings, wiki] = await Promise.all([
+        db.content.findMany({
+          where: {
+            ...publicContentWhere,
+            kind: 'EVENT',
+            status: 'PUBLISHED',
+            startsAt: { gte: new Date() },
+          },
+          include: contentInclude,
+          orderBy: [{ startsAt: 'asc' }, { id: 'asc' }],
+          take: 2,
+        }),
+        db.content.findMany({
+          where: { ...publicContentWhere, kind: 'LISTING', status: 'PUBLISHED' },
+          include: contentInclude,
+          orderBy: [{ createdAt: 'desc' }, { id: 'desc' }],
+          take: 2,
+        }),
+        db.content.findMany({
+          where: { ...publicContentWhere, kind: 'WIKI', status: 'PUBLISHED' },
+          include: contentInclude,
+          orderBy: [{ updatedAt: 'desc' }, { id: 'desc' }],
+          take: 2,
+        }),
+      ]);
+      return reply({ events, listings, wiki });
+    }
     if (method === 'GET' && route === 'stats') {
       const [members, vehicles, posts, events] = await Promise.all([
         db.user.count({ where: { verifiedAt: { not: null } } }),

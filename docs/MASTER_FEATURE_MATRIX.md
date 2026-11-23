@@ -21,10 +21,10 @@ Quellbeleg: `src/components/platform.tsx`. Prüfbeleg/-grenze: `tests/e2e/platfo
 | HOME-005 | aktuelle Beiträge | Teilweise |
 | HOME-006 | kuratierte Featured Builds | Nicht implementiert |
 | HOME-007 | neue Mitglieder | Nicht implementiert |
-| HOME-008 | Eventvorschau | Nicht implementiert |
-| HOME-009 | Marktplatz-Highlights | Nicht implementiert |
+| HOME-008 | Eventvorschau | Teilweise |
+| HOME-009 | Marktplatz-Highlights | Teilweise |
 | HOME-010 | Club-Highlights | Nicht implementiert |
-| HOME-011 | Wiki-Neuigkeiten | Nicht implementiert |
+| HOME-011 | Wiki-Neuigkeiten | Teilweise |
 | HOME-012 | Aktivitätsstrom | Nicht implementiert |
 
 ## Benutzerkonten
@@ -702,10 +702,10 @@ Quellbeleg: `src/app/layout.tsx; next.config.ts`. Prüfbeleg/-grenze: `Produktiv
 | SEO-007 | Sitemap | Nicht implementiert |
 | SEO-008 | öffentliche Profil-Metadaten | Nicht implementiert |
 | SEO-009 | strukturierte Daten | Nicht implementiert |
-| SEO-010 | PWA-Manifest | Nicht implementiert |
-| SEO-011 | App-Icons | Nicht implementiert |
-| SEO-012 | Installierbarkeit | Nicht implementiert |
-| SEO-013 | sicherer Offline-Fallback | Nicht implementiert |
+| SEO-010 | PWA-Manifest | Teilweise |
+| SEO-011 | App-Icons | Teilweise |
+| SEO-012 | Installierbarkeit | Teilweise |
+| SEO-013 | sicherer Offline-Fallback | Teilweise |
 | SEO-014 | next-intl | Nicht implementiert |
 | SEO-015 | europäische Sprachversionen | Nicht implementiert |
 

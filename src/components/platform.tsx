@@ -51,6 +51,11 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
   const [modal, setModal] = useState<Modal>(null);
   const [stats, setStats] = useState({ members: 0, vehicles: 0, posts: 0, events: 0 });
   const [regions, setRegions] = useState<{ id: string; name: string }[]>([]);
+  const [highlights, setHighlights] = useState<{ events: Item[]; listings: Item[]; wiki: Item[] }>({
+    events: [],
+    listings: [],
+    wiki: [],
+  });
   const [vehicles, setVehicles] = useState<Vehicle[]>([]);
   const [items, setItems] = useState<Item[]>([]);
   const [members, setMembers] = useState<Member[]>([]);
@@ -140,12 +145,16 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
         if (!alive) return;
         setStats(s);
         if (screen === 'home' || screen === 'garage') {
-          const [v, c] = await Promise.all([
+          const [v, c, highlights] = await Promise.all([
             api<Vehicle[]>(`vehicles${screen === 'garage' && mine ? '?mine=true' : ''}`),
             api<Item[]>('contents?kind=POST&feed=true'),
+            screen === 'home'
+              ? api<{ events: Item[]; listings: Item[]; wiki: Item[] }>('home-highlights')
+              : null,
           ]);
           if (alive) {
             setVehicles(v);
+            if (highlights) setHighlights(highlights);
             if (screen === 'home') setItems(c);
           }
         } else if (kinds.includes(screen as Kind) || screen === 'saved') {
@@ -691,6 +700,29 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
                       Teile eine Frage, eine Idee oder den nächsten Schritt an deinem Puma.
                     </Empty>
                   )}
+                  {(
+                    [
+                      { kind: 'EVENT', title: 'Nächste Treffen', items: highlights.events },
+                      {
+                        kind: 'LISTING',
+                        title: 'Frisch im Marktplatz',
+                        items: highlights.listings,
+                      },
+                      { kind: 'WIKI', title: 'Neues im Technik-Wiki', items: highlights.wiki },
+                    ] as const
+                  )
+                    .filter((group) => group.items.length > 0)
+                    .map((group) => (
+                      <section key={group.kind}>
+                        <div className="section-heading feed-heading">
+                          <h2>{group.title}</h2>
+                          <button className="text-button" onClick={() => navigate(group.kind)}>
+                            Alle anzeigen <ArrowRight size={16} />
+                          </button>
+                        </div>
+                        <div className="content-grid">{contentCards(group.items)}</div>
+                      </section>
+                    ))}
                 </section>
                 <aside className="right-column">
                   <section className="region-promo">

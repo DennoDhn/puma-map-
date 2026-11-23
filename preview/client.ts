@@ -6,6 +6,8 @@ export async function api(path: string, method = 'GET') {
     switch (url.pathname) {
       case '/me':
         return null;
+      case '/home-highlights':
+        return { events: [], listings: [], wiki: [] };
       case '/stats':
         return { members: 0, vehicles: 0, posts: 0, events: 0 };
       case '/regions':

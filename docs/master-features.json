@@ -59,7 +59,7 @@
     "id": "HOME-008",
     "module": "Startseite",
     "requirement": "Eventvorschau",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/components/platform.tsx",
     "evidence": "tests/e2e/platform.spec.ts"
   },
@@ -67,7 +67,7 @@
     "id": "HOME-009",
     "module": "Startseite",
     "requirement": "Marktplatz-Highlights",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/components/platform.tsx",
     "evidence": "tests/e2e/platform.spec.ts"
   },
@@ -83,7 +83,7 @@
     "id": "HOME-011",
     "module": "Startseite",
     "requirement": "Wiki-Neuigkeiten",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/components/platform.tsx",
     "evidence": "tests/e2e/platform.spec.ts"
   },
@@ -3707,7 +3707,7 @@
     "id": "SEO-010",
     "module": "SEO/PWA/Internationalisierung",
     "requirement": "PWA-Manifest",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/app/layout.tsx; next.config.ts",
     "evidence": "Produktivprüfungen offen"
   },
@@ -3715,7 +3715,7 @@
     "id": "SEO-011",
     "module": "SEO/PWA/Internationalisierung",
     "requirement": "App-Icons",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/app/layout.tsx; next.config.ts",
     "evidence": "Produktivprüfungen offen"
   },
@@ -3723,7 +3723,7 @@
     "id": "SEO-012",
     "module": "SEO/PWA/Internationalisierung",
     "requirement": "Installierbarkeit",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/app/layout.tsx; next.config.ts",
     "evidence": "Produktivprüfungen offen"
   },
@@ -3731,7 +3731,7 @@
     "id": "SEO-013",
     "module": "SEO/PWA/Internationalisierung",
     "requirement": "sicherer Offline-Fallback",
-    "status": "Nicht implementiert",
+    "status": "Teilweise",
     "source": "src/app/layout.tsx; next.config.ts",
     "evidence": "Produktivprüfungen offen"
   },

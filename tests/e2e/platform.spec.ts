@@ -199,12 +199,10 @@ test('register, verify, login, private garage persistence, regional popup and ac
     expect(exported.profile.passwordHash).toBeUndefined();
     expect(exported.vehicles).toHaveLength(1);
   } finally {
-    // Keep the original UI failure visible if the browser target crashed during the test.
-    try {
-      const response = await browserApi(page, '/api/profile', 'DELETE', { password });
-      expect(response.ok).toBe(true);
-    } catch (error) {
-      if (!test.info().errors.length) throw error;
-    }
+    const cleanup = await page.context().request.delete('/api/profile', {
+      data: { password },
+      headers: { origin: new URL(info.project.use.baseURL!).origin },
+    });
+    expect.soft(cleanup.ok()).toBe(true);
   }
 });

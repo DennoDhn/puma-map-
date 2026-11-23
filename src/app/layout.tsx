@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { OfflineSupport } from '../components/offline-support';
 export const metadata: Metadata = {
   title: 'PumaMap — Eine Ikone. Deine Community.',
   description:
     'Die Community für den Ford Puma Mk1. Menschen verbinden, Fahrzeuge bewahren und Projekte gemeinsam voranbringen.',
+  icons: { apple: '/pumamap-192.png' },
   robots: { index: false, follow: false },
 };
 export const viewport: Viewport = {
@@ -15,7 +17,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="de">
-      <body>{children}</body>
+      <body>
+        <OfflineSupport />
+        {children}
+      </body>
     </html>
   );
 }

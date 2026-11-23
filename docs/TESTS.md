@@ -142,3 +142,13 @@ independent penetration testing and production operation. No production release 
 
 Browser fixture tests deliberately create only isolated synthetic accounts and delete them.
 No real credentials, user media or runtime logs are part of the source export.
+
+## 23. November 2026 – GitHub-Pages-Vorschau und Community-Erweiterungen
+
+Die Pages-Version rendert die öffentlichen React-Ansichten mit einem separaten, schreibgeschützten Datenadapter. Der Abruf der veröffentlichten Startseite antwortete mit HTTP 200. Die Navigation von der Startseite zum Forum lief in Firefox bei 390 und 1440 Pixeln Breite.
+
+Für die Serveranwendung bestanden Typprüfung, ESLint, 15 Unit-/Medientests, der Produktionsbuild sowie die PostgreSQL-Prüfungen (25 API-, 11 Community- und ein Migrationstest laut Node-Testreporter, einschließlich übergeordneter Testgruppen). Acht Migrationen wurden in einer isolierten Datenbank angewendet und erneut aufgerufen. Die neuen Prüfungen decken Kommentarmeldungen, Moderationsrechte, Erwähnungen und die Auswahl veröffentlichter Startseiteninhalte ab.
+
+Der Produktionsbuild lieferte Manifest und beide PNG-Icons. Firefox übernahm den Service Worker. Nach Stoppen des Servers erschien bei Aufruf einer Fahrzeugroute die öffentliche Offline-Seite; Cache Storage blieb leer. Die Installation auf physischen iOS- und Android-Geräten steht aus.
+
+Der vollständige Firefox-Durchlauf auf drei simulierten Bildschirmgrößen ergab 14 von 18 bestandenen Abläufen. Registrierungs-/Exportablauf (drei Größen) und Fahrzeugverwaltung (Desktop) meldeten Browserabbrüche. Der Browserlauf ist keine vollständige Geräteabnahme.

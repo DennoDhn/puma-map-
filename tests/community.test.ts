@@ -432,6 +432,41 @@ test('community integration with isolated synthetic accounts', async (t) => {
         );
       },
     );
+    await t.test(
+      'home highlights return future events, available listings and published wiki only',
+      async () => {
+        const seed = { authorId: alice.id, category: 'test', body: 'test' };
+        const rows = await db.content.createManyAndReturn({
+          data: [
+            { ...seed, kind: 'EVENT', title: 'Zukunft', startsAt: new Date(Date.now() + 86400000) },
+            { ...seed, kind: 'EVENT', title: 'Vergangen', startsAt: new Date(0) },
+            { ...seed, kind: 'WIKI', title: 'Entwurf', status: 'DRAFT' },
+            { ...seed, kind: 'WIKI', title: 'Freigegeben' },
+            { ...seed, kind: 'LISTING', title: 'Verkauft', status: 'SOLD' },
+            { ...seed, kind: 'LISTING', title: 'Verfügbar' },
+          ],
+        });
+        try {
+          const highlights = await call('home-highlights');
+          assert.equal(highlights.status, 200);
+          for (const [key, title] of Object.entries({
+            events: 'Zukunft',
+            wiki: 'Freigegeben',
+            listings: 'Verfügbar',
+          })) {
+            const own = highlights.data[key].filter((r: { id: string }) =>
+              rows.some((row) => row.id === r.id),
+            );
+            assert.deepEqual(
+              own.map((r: { title: string }) => r.title),
+              [title],
+            );
+          }
+        } finally {
+          await db.content.deleteMany({ where: { id: { in: rows.map((r) => r.id) } } });
+        }
+      },
+    );
     await t.test('deleting a topic cascades subscriptions and linked notifications', async () => {
       assert.equal((await call(base, 'DELETE', undefined, alice.cookie)).status, 200);
       assert.equal(await db.subscription.count({ where: { contentId: topic.id } }), 0);
