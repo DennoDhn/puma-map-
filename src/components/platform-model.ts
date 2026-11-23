@@ -64,7 +64,7 @@ export type Admin = {
   audit: { id: string; action: string; createdAt: string }[];
 };
 export type Screen =
-  'discover' | 'home' | 'map' | 'garage' | Kind | 'saved' | 'notifications' | 'profile' | 'admin';
+  'discover' | 'home' | 'map' | 'garage' | 'studio' | Kind | 'saved' | 'notifications' | 'profile' | 'admin';
 export type Modal =
   | {
       type: 'auth';

@@ -1,0 +1,171 @@
+/* NOIR Signature · editorial homepage details and tactile destination rail */
+.hero-edition {
+  display:inline-flex;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:29px;
+  color:#e9e7f5;
+  font-size:10px;
+  font-weight:780;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.hero-edition-light {
+  display:inline-block;
+  width:7px;height:7px;
+  flex:0 0 7px;
+  border-radius:50%;
+  background:#ff2daa;
+  box-shadow:0 0 0 4px #ff2daa12,0 0 17px #ff2daa80;
+}
+.hero-edition-divider {
+  display:inline-block;
+  width:1px;height:13px;
+  margin:0 3px;
+  background:#8b5cf6aa;
+}
+.hero-footnote {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:28px 0 0;
+  color:#c1cddd;
+  font-size:11px;
+  font-weight:560;
+  letter-spacing:.035em;
+}
+.hero-footnote-line {
+  display:inline-block;
+  width:20px;height:1px;
+  flex:0 0 20px;
+  background:linear-gradient(90deg,#ff2daa,#8b5cf6);
+}
+.hero-vehicle-label {
+  position:absolute;
+  z-index:2;
+  right:13%;
+  top:12px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  gap:4px;
+  color:#e8edf6;
+  font-size:10px;
+  font-weight:780;
+  letter-spacing:.19em;
+  text-shadow:0 2px 12px #000;
+}
+.hero-vehicle-label span {
+  color:#e4b9ff;
+  font-size:9px;
+  font-weight:550;
+  letter-spacing:.25em;
+}
+.hero-vehicle-halo {
+  pointer-events:none;
+  position:absolute;
+  right:6%;
+  top:23%;
+  width:82%;
+  height:67%;
+  border-radius:50%;
+  background:radial-gradient(ellipse,#c8ff281b 0%,#8b5cf612 42%,#ff2daa08 67%,transparent 75%);
+  filter:blur(18px);
+}
+.signature-pathways {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:13px;
+  margin-top:19px;
+  margin-bottom:9px;
+}
+.signature-pathway {
+  position:relative;
+  min-width:0;
+  min-height:138px;
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  text-align:left;
+  gap:12px;
+  padding:19px 20px 16px;
+  color:var(--ice-white,#f3f6fa);
+  border:1px solid #58637566;
+  border-radius:17px;
+  background:
+    radial-gradient(circle at 100% 0%,#8b5cf619,transparent 55%),
+    linear-gradient(140deg,#1b2531,#0b111b 83%);
+  box-shadow:0 12px 36px #0004,inset 0 1px 0 #ffffff0e;
+  cursor:pointer;
+  transition:background-color 180ms ease,border-color 180ms ease,transform 180ms ease,box-shadow 180ms ease;
+}
+.signature-pathway::before {
+  content:"";
+  position:absolute;
+  top:0;left:20px;right:20px;
+  height:1px;
+  background:linear-gradient(90deg,#c8ff28a5,transparent 80%);
+}
+.signature-pathway:nth-child(2)::before {
+  background:linear-gradient(90deg,#8b5cf6bc,transparent 80%);
+}
+.signature-pathway:nth-child(3)::before {
+  background:linear-gradient(90deg,#ff2daaae,transparent 80%);
+}
+.pathway-index {
+  color:#bed1d9;
+  font-size:9px;
+  font-weight:780;
+  letter-spacing:.17em;
+}
+.signature-pathway:nth-child(2) .pathway-index { color:#c9b0ff; }
+.signature-pathway:nth-child(3) .pathway-index { color:#ff9cda; }
+.pathway-title {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  width:100%;
+  font-size:clamp(14px,1.4vw,18px);
+  line-height:1.2;
+  font-weight:800;
+  letter-spacing:-.03em;
+}
+.pathway-title svg:first-child { color:#d9ff7c; }
+.signature-pathway:nth-child(2) .pathway-title svg:first-child { color:#bc98ff; }
+.signature-pathway:nth-child(3) .pathway-title svg:first-child { color:#ff8ccc; }
+.pathway-title svg:last-child { margin-left:auto;color:#b7c3d2; }
+.pathway-description {
+  color:#b1bfce;
+  font-size:12px;
+  line-height:1.5;
+}
+.signature-pathway:hover {
+  border-color:#aa80f88c;
+  box-shadow:0 19px 52px #0008,0 0 26px #8b5cf60a;
+}
+.signature-pathway:focus-visible {
+  outline:2px solid #d8ff75;
+  outline-offset:4px;
+}
+@media (hover:hover) and (pointer:fine) {
+  .signature-pathway:hover { transform:translateY(-3px); }
+}
+@media (max-width:1120px) {
+  .signature-pathways { grid-template-columns:1fr; }
+  .signature-pathway { min-height:104px; padding:14px 18px; gap:7px; }
+  .signature-pathway .pathway-title { font-size:17px; }
+}
+@media (max-width:760px) {
+  .hero-edition { margin-bottom:22px;gap:7px;font-size:8px; }
+  .hero-footnote { margin-top:19px;font-size:10px;max-width:260px; }
+  .hero-vehicle-label { top:3px;right:17%;font-size:8px; }
+  .hero-vehicle-label span { font-size:8px; }
+  .signature-pathways { gap:10px;margin-top:13px; }
+  .signature-pathway { min-height:92px;padding:12px 15px; }
+  .pathway-description { font-size:11px; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .signature-pathway { transition:none!important; }
+  .signature-pathway:hover { transform:none!important; }
+}

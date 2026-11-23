@@ -32,6 +32,7 @@ import {
   Radio,
 } from 'lucide-react';
 import { Car } from './car';
+import { VirtualGarage } from './virtual-garage';
 const PlatformDialogs = dynamic(() => import('./platform-dialogs'));
 import type { Member } from './community-map';
 const CommunityMap = dynamic(() => import('./community-map'), {
@@ -592,11 +593,14 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
               </button>
             </div>
           )}
-          {screen === 'home' ? (
+          {screen === 'studio' ? (
+            <VirtualGarage onBack={() => navigate('garage')} />
+          ) : screen === 'home' ? (
             <>
               <section className="hero">
                 <div className="hero-grid" aria-hidden="true" />
                 <div className="hero-copy">
+                  <span className="hero-edition"><span className="hero-edition-light" aria-hidden="true" /> NOIR SIGNATURE <span className="hero-edition-divider" aria-hidden="true" /> THE MK1 COLLECTIVE</span>
                   <span className="hero-kicker">
                     <span /> BUILT AROUND A LEGEND
                   </span>
@@ -624,11 +628,14 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
                       Karte entdecken <MapPin size={16} />
                     </button>
                   </div>
+                  <p className="hero-footnote"><span aria-hidden="true" className="hero-footnote-line" /> Die unabhängige Community für den Ford Puma Mk1.</p>
                 </div>
                 <div className="hero-visual">
                   <div className="hero-model" aria-hidden="true">
                     PUMA<span>MK1</span>
                   </div>
+                  <span className="hero-vehicle-label">THE ORIGINAL COUPÉ <span>1997 / 2002</span></span>
+                  <div className="hero-vehicle-halo" aria-hidden="true" />
                   <Car className="hero-car" />
                   <div className="spec-line">
                     <span>1997 — 2002</span>
@@ -641,6 +648,23 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
                   <span>UNABHÄNGIG. LEIDENSCHAFTLICH. PUMAMAP.</span>
                 </div>
               </section>
+              <nav className="signature-pathways" aria-label="PumaMap entdecken">
+                <button type="button" className="signature-pathway" onClick={() => navigate('garage')}>
+                  <span className="pathway-index">01 / GARAGE</span>
+                  <span className="pathway-title"><CarFront size={22} /> Deine Fahrzeuge <ArrowUpRight size={18} /></span>
+                  <span className="pathway-description">Fahrzeuge, Umbauten und ihre Geschichte.</span>
+                </button>
+                <button type="button" className="signature-pathway" onClick={() => navigate('BUILD')}>
+                  <span className="pathway-index">02 / BUILDS</span>
+                  <span className="pathway-title"><Activity size={22} /> Projekte entdecken <ArrowUpRight size={18} /></span>
+                  <span className="pathway-description">Vom ersten Konzept bis zum letzten Detail.</span>
+                </button>
+                <button type="button" className="signature-pathway" onClick={() => navigate('POST')}>
+                  <span className="pathway-index">03 / COMMUNITY</span>
+                  <span className="pathway-title"><Users size={22} /> Austausch erleben <ArrowUpRight size={18} /></span>
+                  <span className="pathway-description">Menschen, Wissen und gemeinsame Leidenschaft.</span>
+                </button>
+              </nav>
               <section className="stats" aria-label="Community-Statistiken">
                 {[
                   { icon: Users, value: stats.members, label: 'Verifizierte Mitglieder' },
@@ -781,6 +805,7 @@ export function Platform({ initialContentId }: { initialContentId?: string } = {
           ) : null}
           {screen === 'garage' && (
             <>
+              <div className="vg-garage-cta"><div><span className="eyebrow">VIRTUAL GARAGE / CONCEPT STUDIO</span><h2>Baue deinen Puma digital.</h2><p>Lack, Felgen und Fahrwerk ausprobieren. Entwürfe lokal speichern.</p></div><button type="button" className="button" onClick={() => navigate('studio')}>Studio öffnen <ArrowUpRight size={17}/></button></div>
               <div className="toolbar">
                 <div className="segmented">
                   <button className={!mine ? 'selected' : ''} onClick={() => setMine(false)}>

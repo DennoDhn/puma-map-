@@ -8,6 +8,7 @@ import {
   BookOpen,
   CalendarDays,
   Wrench,
+  Palette,
 } from 'lucide-react';
 import type { Kind } from './platform-model';
 export const nav = [
@@ -15,6 +16,7 @@ export const nav = [
   { id: 'discover', label: 'Community-Suche', icon: Compass },
   { id: 'map', label: 'Community-Karte', icon: MapPin },
   { id: 'garage', label: 'Fahrzeuggarage', icon: CarFront },
+  { id: 'studio', label: 'Virtual Garage Studio', icon: Palette },
   { id: 'POST', label: 'Community Feed', icon: Radio },
   { id: 'TOPIC', label: 'Forum', icon: MessageCircle },
   { id: 'LISTING', label: 'Marktplatz', icon: ShoppingBag },
@@ -42,6 +44,11 @@ export const headings: Record<string, { eyebrow: string; title: string; descript
     eyebrow: 'DEINE AUTOMOTIVE IDENTITÄT',
     title: 'Jeder Puma erzählt eine Geschichte.',
     description: 'Gib deinem Fahrzeug einen Platz. Halte fest, was es besonders macht.',
+  },
+  studio: {
+    eyebrow: 'NOIR SIGNATURE · VIRTUAL GARAGE',
+    title: 'Dein Puma. Deine Vision.',
+    description: 'Erstelle individuelle Fahrzeug-Designstudien und speichere sie auf deinem Gerät.',
   },
   POST: {
     eyebrow: 'AUS DER COMMUNITY',
