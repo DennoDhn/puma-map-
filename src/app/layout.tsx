@@ -3,6 +3,7 @@ import './globals.css';
 import './driveonyx-2.css';
 import './noir-signature.css';
 import './noir-details.css';
+import './virtual-garage.css';
 import { OfflineSupport } from '../components/offline-support';
 export const metadata: Metadata = {
   title: 'PumaMap — Eine Ikone. Deine Community.',
