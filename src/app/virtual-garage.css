@@ -1,0 +1,55 @@
+/* Virtual Garage · NOIR Signature / concept configurator */
+.vg { max-width:1530px; margin:0 auto 60px; }
+.vg-head { display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 25px; }
+.vg-brand { font-size:10px;letter-spacing:.16em;color:#a9b5c7;text-align:right; }
+.vg-brand strong { color:#c8ff28; }
+.vg-intro { margin-bottom:26px; }
+.vg-intro h2 { font-size:clamp(2rem,4vw,3.6rem);letter-spacing:-.065em;margin:6px 0 11px; }
+.vg-intro h2 em { color:#ff76c8; }
+.vg-intro p { max-width:760px;line-height:1.7;color:#b9c7d7; }
+.vg-grid { display:grid;grid-template-columns:minmax(0,1.7fr) minmax(315px,1fr);gap:18px;align-items:start; }
+.vg-stage { position:relative;overflow:hidden;min-height:390px;border-radius:24px;border:1px solid #7a779956;background:radial-gradient(ellipse at 55% 56%,#8b5cf622,transparent 54%),radial-gradient(ellipse at 84% 15%,#ff2daa1a,transparent 52%),linear-gradient(125deg,#1a2432,#080c14 75%);box-shadow:0 27px 70px #0008,inset 0 1px 0 #ffffff25; }
+.vg-stage::before { content:"";position:absolute;inset:0;pointer-events:none;opacity:.12;background-image:linear-gradient(#bac4df44 1px,transparent 1px),linear-gradient(90deg,#bac4df44 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(90deg,transparent,#000); }
+.vg-stage::after { content:"";position:absolute;top:0;left:15%;right:15%;height:2px;background:linear-gradient(90deg,transparent,#c8ff28,#8b5cf6,#ff2daa,transparent); }
+.vg-stage svg { position:relative;z-index:1;width:100%;height:auto;display:block;margin:20px 0 0; }
+.vg-stage-top,.vg-stage-bottom { display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px 0;color:#c4cce2;font-size:10px;font-weight:700;letter-spacing:.15em; }
+.vg-stage-bottom { position:absolute;z-index:2;bottom:0;left:0;right:0;padding:17px 24px;background:#080d14ac;border-top:1px solid #ffffff19; }
+.vg-stage-bottom span span { color:#ff2daa; }
+.vg-pulse { display:inline-block;width:7px;height:7px;margin-right:8px;background:#c8ff28;border-radius:50%;box-shadow:0 0 12px #c8ff28aa; }
+.vg-controls { display:grid;gap:12px;min-width:0;border:1px solid #53617465;border-radius:20px;padding:23px;background:linear-gradient(135deg,#171f2b,#0a1019);box-shadow:0 22px 62px #0005; }
+.vg-control-head { display:flex;justify-content:space-between;align-items:center;gap:12px;border-bottom:1px solid #ffffff17;padding-bottom:16px;color:#d7c1ff;font-size:10px;letter-spacing:.15em;font-weight:750; }
+.vg-reset { border:0;background:none;color:#c0cde0;display:inline-flex;align-items:center;gap:6px;padding:9px;min-height:42px; }
+.vg-controls input:not([type='range']):not([type='color']) { display:block;width:100%;padding:13px;border:1px solid #505b70;background:#090f18;color:#f3f6fa;border-radius:10px;font-size:16px; }
+.vg-label { color:#d2dbea;font-size:12px;font-weight:700; }
+.vg-fieldset { min-width:0;border:0;padding:16px 0 0;margin:4px 0 0;border-top:1px solid #ffffff16; }
+.vg-fieldset legend { float:left;width:100%;padding:0 0 12px;color:#eef2fa;font-size:13px;font-weight:780; }
+.vg-paints { display:flex;gap:10px;flex-wrap:wrap;clear:both; }
+.vg-paints button { width:43px;height:43px;border-radius:50%;border:3px solid #9ba9bd55;background:var(--swatch);display:flex;align-items:center;justify-content:center;color:white;text-shadow:0 1px 3px black;box-shadow:0 3px 15px #0009; }
+.vg-paints button.selected { border-color:#e5ff9c;outline:2px solid #c8ff28;outline-offset:2px; }
+.vg-inline { display:flex;align-items:center;justify-content:space-between;gap:14px;margin:15px 0 9px;color:#c3cddd;font-size:12px; }
+.vg-inline input[type=color] { width:58px;height:40px;padding:3px;border-radius:9px;border:1px solid #69768d;background:#131923;cursor:pointer; }
+.vg-segments { display:grid;grid-template-columns:repeat(3,1fr);gap:7px;clear:both; }
+.vg-segments button { min-height:43px;border-radius:10px;border:1px solid #505d73;background:#121a25;color:#c0cbda; }
+.vg-segments button.active { border-color:#a68aff;background:#8b5cf627;color:#f3e9ff; }
+.vg-range-label { display:flex;justify-content:space-between;gap:10px;margin:16px 0 5px;font-size:12px;color:#c3cddd; }
+.vg-range-label strong { color:#c8ff28;font-size:13px; }
+.vg-controls input[type=range] { width:100%;accent-color:#b19bff;min-height:30px; }
+.vg-actions { display:flex;gap:9px;flex-wrap:wrap;margin-top:10px; }
+.vg-actions .button { flex:1;white-space:nowrap; }
+.vg-status { color:#d7ff90;font-size:12px;margin:2px 0; }
+.vg-drafts { margin-top:22px;padding:25px;border:1px solid #454f606a;border-radius:20px;background:linear-gradient(120deg,#141b25,#0a0e17); }
+.vg-drafts h3 { margin:0 0 10px; }
+.vg-drafts h3 span { color:#bb9bff;font-size:13px; }
+.vg-drafts>p { display:flex;align-items:center;gap:8px;font-size:12px;color:#c0ccdc; }
+.vg-draft-grid { display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:12px;margin-top:20px; }
+.vg-draft { display:flex;flex-direction:column;gap:9px;min-width:0;padding:15px;border-radius:13px;border:1px solid #576174;background:#111925; }
+.vg-draft-color { height:7px;border-radius:6px; }
+.vg-draft strong { overflow-wrap:anywhere; }
+.vg-draft small { color:#b9c3d2; }
+.vg-draft>div:last-child { display:flex;align-items:center;justify-content:space-between;gap:10px; }
+.vg-draft button { min-height:44px;padding:7px 12px;border:1px solid #69758b;border-radius:9px;background:#242a39;color:#f3f6fa; }
+.vg-empty { padding:20px;border:1px dashed #636c80;border-radius:13px;color:#b9c3d2;font-size:13px; }
+.vg-disclaimer { margin:18px 0 0;color:#aeb9ca;font-size:12px;line-height:1.7; }
+@media(max-width:1150px) { .vg-grid { grid-template-columns:1fr; }.vg-stage { min-height:0; }.vg-stage svg { max-height:480px; } }
+@media(max-width:600px) { .vg-head { align-items:flex-start;flex-direction:column; }.vg-brand { text-align:left; }.vg-controls,.vg-drafts { padding:17px;border-radius:15px; }.vg-stage { border-radius:16px; }.vg-stage-top,.vg-stage-bottom { padding:15px;font-size:8px; }.vg-stage svg { margin:14px 0 20px; }.vg-actions { flex-direction:column; }.vg-drafts>p { align-items:flex-start; } }
+@media(prefers-reduced-motion:reduce){ .vg * { scroll-behavior:auto!important; } }
